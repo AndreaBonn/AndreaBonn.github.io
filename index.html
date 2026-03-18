@@ -447,7 +447,11 @@
     to   { opacity: 1; transform: translateY(0); }
   }
 
+  .print-only { display: none; }
+
   @media print {
+    .screen-only { display: none !important; }
+    .print-only { display: block !important; }
     body { background: white; font-size: 14px; }
     .pdf-download { display: none; }
     .page { padding: 20px 30px; }
@@ -543,8 +547,11 @@
 
       <section>
         <div class="sec-title">Profilo</div>
-        <p class="intro-text">
-          Data Analyst e AI Engineer con <strong>oltre <span id="exp-years-text">4</span> anni di esperienza</strong> in consulenza data per clienti enterprise. Pipeline di analisi end-to-end, dashboard BI e modelli NLP. Focus attuale sull'<strong>AI Engineering</strong>: agenti AI, workflow agentici con MCP e integrazione LLM in produzione. <strong>Docente universitario</strong> di AI applicata al coding.
+        <p class="intro-text screen-only">
+          Data Analyst e AI Engineer con <strong>oltre <span id="exp-years-text">4</span> anni di esperienza</strong> in consulenza data per clienti enterprise. Progetto pipeline di analisi end-to-end, dashboard BI e modelli NLP — dall'ETL al deploy in produzione con FastAPI e Docker. Oggi il mio focus è sull'<strong>AI Engineering</strong>: sviluppo agenti AI e workflow agentici con MCP, tool use e integrazione LLM, portando l'AI generativa dal prototipo al valore di business. Background in Data Science ed Economia Aziendale, <strong>docente universitario</strong> in un corso intensivo di 8 ore su AI applicata al coding.
+        </p>
+        <p class="intro-text print-only">
+          Data Analyst e AI Engineer con <strong>oltre <span>4</span> anni di esperienza</strong> in consulenza data per clienti enterprise. Pipeline di analisi end-to-end, dashboard BI e modelli NLP. Focus attuale sull'<strong>AI Engineering</strong>: agenti AI, workflow agentici con MCP e integrazione LLM in produzione. <strong>Docente universitario</strong> di AI applicata al coding.
         </p>
       </section>
 
@@ -557,7 +564,10 @@
             <div class="exp-period">Nov 2021 → presente</div>
           </div>
           <div class="exp-company">Linkalab S.r.l. · Cagliari</div>
-          <div class="exp-desc">
+          <div class="exp-desc screen-only">
+            Pipeline di analisi dati end-to-end per clienti enterprise. Dashboard interattive con Power BI, QuickSight, Tableau e Looker Studio. Integrazione di LLM via API OpenAI e Anthropic; sviluppo di agenti AI con MCP, tool use, sub-agents, skills e rules. Uso avanzato di Claude Code, Windsurf e Gemini CLI in produzione. NLP, sentiment analysis, time series e SHAP/LIME. Deploy con FastAPI e Docker.
+          </div>
+          <div class="exp-desc print-only">
             Pipeline dati end-to-end e dashboard BI (Power BI, QuickSight, Tableau, Looker Studio) per clienti enterprise. Sviluppo agenti AI con MCP, tool use e integrazione LLM (OpenAI, Anthropic). NLP, sentiment analysis, time series. Deploy con FastAPI e Docker.
           </div>
           <div class="exp-tags">
@@ -581,7 +591,10 @@
             <div class="exp-period">Aprile 2026</div>
           </div>
           <div class="exp-company">Università degli Studi di Cagliari</div>
-          <div class="exp-desc">
+          <div class="exp-desc screen-only">
+            Progettazione ed erogazione di un corso intensivo da <strong>8 ore</strong> su <em>"Intelligenza Artificiale applicata al Coding"</em>. Contenuti: uso efficace di LLM per la generazione e il refactoring del codice, prompt engineering avanzato, integrazione di tool use e agenti AI nei workflow di sviluppo software moderni.
+          </div>
+          <div class="exp-desc print-only">
             Corso intensivo di <strong>8 ore</strong> su <em>"AI applicata al Coding"</em>: prompt engineering avanzato, generazione e refactoring di codice con LLM, integrazione di agenti AI nei workflow di sviluppo.
           </div>
           <div class="exp-tags">
@@ -603,7 +616,10 @@
             <div class="exp-period">In corso</div>
           </div>
           <div class="exp-company"><a href="https://github.com/AndreaBonn" target="_blank" style="color:var(--blue);text-decoration:none;">github.com/AndreaBonn</a></div>
-          <div class="exp-desc">
+          <div class="exp-desc screen-only">
+            Web app accessibili pubblicamente, estensioni Chrome e pipeline LLM end-to-end. Esplorazione di interfacce data-driven e tool per la produttività.
+          </div>
+          <div class="exp-desc print-only">
             Web app pubbliche, estensioni Chrome e pipeline LLM end-to-end. Interfacce data-driven e tool per la produttività.
           </div>
           <div class="exp-tags">

@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Andrea Bonacci — Data Analyst & AI Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #faf9f7;
+    --bg2: #f3f1ee;
+    --surface: #ffffff;
+    --border: #e4e0d8;
+    --border-strong: #c8c3b8;
+    --ink: #1a1916;
+    --ink-mid: #4a4740;
+    --ink-soft: #8c8880;
+    --ink-faint: #c0bdb8;
+    --blue: #1d4e89;
+    --blue-light: #e8eef6;
+    --gold: #8b6914;
+    --gold-light: #f5f0e5;
+    --green: #2d6a4f;
+    --green-light: #eaf3ee;
+    --rule: #d8d4cc;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Jost', sans-serif;
+    font-size: 13.5px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 56px 48px;
+    animation: fadeIn 0.5s ease both;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 48px;
+    align-items: end;
+    padding-bottom: 32px;
+    border-bottom: 1.5px solid var(--ink);
+    margin-bottom: 40px;
+  }
+
+  .name-block h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 58px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -0.5px;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+
+  .name-block h1 em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--blue);
+  }
+
+  .subtitle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .subtitle-sep {
+    display: inline-block;
+    width: 20px;
+    height: 1px;
+    background: var(--border-strong);
+  }
+
+  .contact-block {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-end;
+    padding-bottom: 4px;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--ink-mid);
+    font-size: 12.5px;
+    text-decoration: none;
+    transition: color 0.2s;
+    font-weight: 300;
+  }
+
+  .contact-item:hover { color: var(--blue); }
+
+  .pdf-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 4px;
+    padding: 5px 14px;
+    font-size: 11.5px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--surface);
+    background: var(--blue);
+    border-radius: 3px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.1s;
+  }
+
+  .pdf-download:hover { background: #163d6b; transform: translateY(-1px); }
+  .pdf-download .c-icon { color: var(--surface); }
+
+  .c-icon {
+    width: 13px;
+    height: 13px;
+    color: var(--ink-faint);
+    flex-shrink: 0;
+  }
+
+  .body-grid {
+    display: grid;
+    grid-template-columns: 1fr 230px;
+    gap: 48px;
+  }
+
+  .sec-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .sec-title::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  section { margin-bottom: 36px; }
+
+  .intro-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17.5px;
+    font-weight: 300;
+    line-height: 1.75;
+    color: var(--ink-mid);
+    font-style: italic;
+    padding-left: 20px;
+    border-left: 2px solid var(--gold);
+  }
+
+  .intro-text strong {
+    font-style: normal;
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  .exp-item {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .exp-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .exp-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 2px;
+  }
+
+  .exp-role {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+
+  .exp-period {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    color: var(--ink-faint);
+    white-space: nowrap;
+    font-weight: 300;
+  }
+
+  .exp-company {
+    font-size: 12px;
+    color: var(--blue);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .exp-desc {
+    color: var(--ink-mid);
+    font-size: 13.5px;
+    line-height: 1.7;
+    font-weight: 300;
+    margin-bottom: 12px;
+  }
+
+  .exp-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    padding: 2px 8px;
+    border-radius: 2px;
+    font-weight: 300;
+  }
+
+  .tag-blue  { background: var(--blue-light); color: var(--blue); }
+  .tag-gold  { background: var(--gold-light); color: var(--gold); }
+  .tag-green { background: var(--green-light); color: var(--green); }
+  .tag-plain { background: var(--bg2); color: var(--ink-soft); }
+
+  .edu-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--rule);
+    align-items: start;
+  }
+
+  .edu-item:first-child { padding-top: 0; }
+  .edu-item:last-child  { border-bottom: none; padding-bottom: 0; }
+
+  .edu-degree {
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 2px;
+  }
+
+  .edu-place {
+    font-size: 12px;
+    color: var(--ink-soft);
+    font-weight: 300;
+  }
+
+  .edu-right { text-align: right; }
+
+  .edu-grade {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--blue);
+    line-height: 1;
+    margin-bottom: 2px;
+  }
+
+  .edu-year {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--ink-faint);
+    font-weight: 300;
+  }
+
+  .sidebar { border-left: 1px solid var(--rule); padding-left: 32px; }
+  .sidebar section { margin-bottom: 28px; }
+
+  .skill-cat {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 7px;
+    margin-top: 14px;
+    font-weight: 400;
+  }
+
+  .skill-cat:first-child { margin-top: 0; }
+
+  .skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .sk {
+    font-size: 12px;
+    padding: 3px 9px;
+    border-radius: 2px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--ink-mid);
+    font-weight: 300;
+    transition: all 0.15s;
+  }
+
+  .sk:hover { border-color: var(--blue); color: var(--blue); }
+
+  .sk.strong {
+    background: var(--blue-light);
+    border-color: transparent;
+    color: var(--blue);
+    font-weight: 500;
+  }
+
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .kpi {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 10px 10px 8px;
+    text-align: center;
+    transition: border-color 0.2s;
+  }
+
+  .kpi:hover { border-color: var(--blue); }
+
+  .kpi-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--blue);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .kpi-label {
+    font-size: 10px;
+    color: var(--ink-soft);
+    line-height: 1.3;
+    font-weight: 300;
+  }
+
+  .lang-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .lang-row:last-child { border-bottom: none; }
+  .lang-name { font-size: 13px; color: var(--ink); font-weight: 400; }
+
+  .lang-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    padding: 2px 7px;
+    border-radius: 2px;
+    background: var(--bg2);
+    color: var(--ink-soft);
+    font-weight: 300;
+  }
+
+  .lang-badge.native { background: var(--green-light); color: var(--green); }
+
+  .link-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 0;
+    text-decoration: none;
+    color: var(--ink-mid);
+    font-size: 12px;
+    font-weight: 300;
+    border-bottom: 1px solid var(--rule);
+    transition: color 0.2s;
+  }
+
+  .link-row:last-child { border-bottom: none; }
+  .link-row:hover { color: var(--blue); }
+  .link-icon { color: var(--ink-faint); font-size: 11px; }
+
+  .callout {
+    background: var(--blue-light);
+    border-left: 2px solid var(--blue);
+    border-radius: 2px;
+    padding: 12px 14px;
+    margin-bottom: 8px;
+  }
+
+  .callout-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 4px;
+    font-weight: 400;
+  }
+
+  .callout-text {
+    font-size: 12.5px;
+    color: var(--ink-mid);
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  .callout.gold-variant {
+    background: var(--gold-light);
+    border-left-color: var(--gold);
+  }
+
+  .callout.gold-variant .callout-label { color: var(--gold); }
+
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @media print {
+    body { background: white; font-size: 11.5px; }
+    .pdf-download { display: none; }
+    .page { padding: 20px 28px; }
+    header { padding-bottom: 16px; margin-bottom: 20px; gap: 24px; }
+    .name-block h1 { font-size: 42px; margin-bottom: 4px; }
+    .subtitle { font-size: 10px; }
+    .contact-item { font-size: 11px; gap: 5px; }
+    .c-icon { width: 11px; height: 11px; }
+    .intro-text { font-size: 13.5px; line-height: 1.5; padding-left: 14px; }
+    section { margin-bottom: 14px; }
+    .sec-title { margin-bottom: 8px; font-size: 10px; }
+    .exp-item { margin-bottom: 10px; padding-bottom: 10px; }
+    .exp-role { font-size: 13px; }
+    .exp-company { font-size: 10.5px; margin-bottom: 6px; }
+    .exp-desc { font-size: 11.5px; line-height: 1.5; margin-bottom: 6px; }
+    .exp-period { font-size: 9.5px; }
+    .tag { font-size: 9.5px; padding: 1px 6px; }
+    .body-grid { gap: 24px; grid-template-columns: 1fr 210px; }
+    .sidebar { padding-left: 20px; }
+    .sidebar section { margin-bottom: 10px; }
+    .skill-cat { margin-top: 7px; margin-bottom: 4px; font-size: 8.5px; }
+    .sk { font-size: 10.5px; padding: 2px 7px; }
+    .edu-item { padding: 6px 0; }
+    .edu-degree { font-size: 12px; }
+    .edu-place { font-size: 10.5px; }
+    .edu-grade { font-size: 18px; }
+    .kpi { padding: 6px 6px 4px; }
+    .kpi-num { font-size: 24px; }
+    .kpi-label { font-size: 9px; }
+    .callout { padding: 6px 8px; margin-bottom: 4px; }
+    .callout-label { font-size: 8px; }
+    .callout-text { font-size: 11px; line-height: 1.4; }
+    .lang-row { padding: 5px 0; }
+    .lang-name { font-size: 11.5px; }
+    .link-row { font-size: 10.5px; padding: 5px 0; }
+  }
+
+  @media (max-width: 680px) {
+    .body-grid { grid-template-columns: 1fr; }
+    .sidebar { border-left: none; padding-left: 0; border-top: 1px solid var(--rule); padding-top: 28px; }
+    header { grid-template-columns: 1fr; }
+    .contact-block { align-items: flex-start; }
+    .name-block h1 { font-size: 40px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="name-block">
+      <h1>Andrea <em>Bonacci</em></h1>
+      <div class="subtitle">
+        Data Analyst
+        <span class="subtitle-sep"></span>
+        AI Engineer
+      </div>
+    </div>
+    <div class="contact-block">
+      <a href="tel:+393930063841" class="contact-item">
+        <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.72 6.72l1.28-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        +39 393 006 3841
+      </a>
+      <a href="mailto:andreabonacci95@protonmail.com" class="contact-item">
+        <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        andreabonacci95@protonmail.com
+      </a>
+      <a href="https://it.linkedin.com/in/andrea-bonacci-b017b0196" target="_blank" class="contact-item">
+        <svg class="c-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        linkedin.com/in/andrea-bonacci
+      </a>
+      <a href="https://github.com/AndreaBonn" target="_blank" class="contact-item">
+        <svg class="c-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+        github.com/AndreaBonn
+      </a>
+      <span class="contact-item">
+        <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Cagliari, Italia
+      </span>
+      <a href="andrea_bonacci_cv.pdf" download target="_blank" class="pdf-download">
+        <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Scarica PDF
+      </a>
+    </div>
+  </header>
+
+  <div class="body-grid">
+
+    <div class="left-col">
+
+      <section>
+        <div class="sec-title">Profilo</div>
+        <p class="intro-text">
+          Data Analyst e AI Engineer con <strong>oltre <span id="exp-years-text">4</span> anni di esperienza</strong> in consulenza data per clienti enterprise. Progetto pipeline di analisi end-to-end, dashboard BI e modelli NLP — dall'ETL al deploy in produzione con FastAPI e Docker. Oggi il mio focus è sull'<strong>AI Engineering</strong>: sviluppo agenti AI e workflow agentici con MCP, tool use e integrazione LLM, portando l'AI generativa dal prototipo al valore di business. Background in Data Science ed Economia Aziendale, <strong>docente universitario</strong> in un corso intensivo di 8 ore su AI applicata al coding.
+        </p>
+      </section>
+
+      <section>
+        <div class="sec-title">Esperienza professionale</div>
+
+        <div class="exp-item">
+          <div class="exp-meta">
+            <div class="exp-role">Data Analyst & AI Engineer</div>
+            <div class="exp-period">Nov 2021 → presente</div>
+          </div>
+          <div class="exp-company">Linkalab S.r.l. · Cagliari</div>
+          <div class="exp-desc">
+            Pipeline di analisi dati end-to-end per clienti enterprise. Dashboard interattive con Power BI, QuickSight, Tableau e Looker Studio. Integrazione di LLM via API OpenAI e Anthropic; sviluppo di agenti AI con MCP, tool use, sub-agents, skills e rules. Uso avanzato di Claude Code, Windsurf e Gemini CLI in produzione. NLP, sentiment analysis, time series e SHAP/LIME. Deploy con FastAPI e Docker.
+          </div>
+          <div class="exp-tags">
+            <span class="tag tag-blue">Python</span>
+            <span class="tag tag-blue">SQL</span>
+            <span class="tag tag-green">Agenti AI</span>
+            <span class="tag tag-green">MCP</span>
+            <span class="tag tag-green">LLM Integration</span>
+            <span class="tag tag-gold">Power BI</span>
+            <span class="tag tag-gold">QuickSight</span>
+            <span class="tag tag-gold">Tableau</span>
+            <span class="tag tag-plain">Docker</span>
+            <span class="tag tag-plain">FastAPI</span>
+            <span class="tag tag-plain">AWS S3/Athena</span>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-meta">
+            <div class="exp-role">Docente — Corso Universitario</div>
+            <div class="exp-period">Aprile 2026</div>
+          </div>
+          <div class="exp-company">Università degli Studi di Cagliari</div>
+          <div class="exp-desc">
+            Progettazione ed erogazione di un corso intensivo da <strong>8 ore</strong> su <em>"Intelligenza Artificiale applicata al Coding"</em>. Contenuti: uso efficace di LLM per la generazione e il refactoring del codice, prompt engineering avanzato, integrazione di tool use e agenti AI nei workflow di sviluppo software moderni.
+          </div>
+          <div class="exp-tags">
+            <span class="tag tag-green">AI per Coding</span>
+            <span class="tag tag-green">Prompt Engineering</span>
+            <span class="tag tag-blue">LLM</span>
+            <span class="tag tag-plain">Formazione universitaria</span>
+          </div>
+        </div>
+
+      </section>
+
+      <section>
+        <div class="sec-title">Progetti & Open Source</div>
+
+        <div class="exp-item">
+          <div class="exp-meta">
+            <div class="exp-role">Web App, Estensioni Chrome & Pipeline LLM</div>
+            <div class="exp-period">In corso</div>
+          </div>
+          <div class="exp-company"><a href="https://github.com/AndreaBonn" target="_blank" style="color:var(--blue);text-decoration:none;">github.com/AndreaBonn</a></div>
+          <div class="exp-desc">
+            Web app accessibili pubblicamente, estensioni Chrome e pipeline LLM end-to-end. Esplorazione di interfacce data-driven e tool per la produttività.
+          </div>
+          <div class="exp-tags">
+            <span class="tag tag-blue">Web App</span>
+            <span class="tag tag-plain">Chrome Extensions</span>
+            <span class="tag tag-green">AI Integration</span>
+          </div>
+        </div>
+
+      </section>
+
+      <section>
+        <div class="sec-title">Formazione</div>
+
+        <div class="edu-item">
+          <div>
+            <div class="edu-degree">Laurea Magistrale — Data Science & Business Informatics</div>
+            <div class="edu-place">Università di Pisa</div>
+            <div style="font-size:11.5px;color:var(--ink-soft);font-weight:300;margin-top:4px;font-style:italic;">Tesi: Emotion Analysis in italiano per monitorare la reputazione online</div>
+          </div>
+          <div class="edu-right">
+            <div class="edu-grade">101</div>
+            <div class="edu-year">2022</div>
+          </div>
+        </div>
+
+        <div class="edu-item">
+          <div>
+            <div class="edu-degree">Laurea Triennale — Economia Aziendale</div>
+            <div class="edu-place">Università di Pisa</div>
+          </div>
+          <div class="edu-right">
+            <div class="edu-grade">101</div>
+            <div class="edu-year">2018</div>
+          </div>
+        </div>
+
+        <div class="edu-item">
+          <div>
+            <div class="edu-degree">Diploma — Liceo Scientifico L. B. Alberti</div>
+          </div>
+          <div class="edu-right">
+            <div class="edu-grade" style="font-size:20px">95</div>
+            <div class="edu-year">2014</div>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+
+    <div class="sidebar">
+
+      <section>
+        <div class="sec-title">In sintesi</div>
+        <div class="kpi" style="max-width:140px;">
+          <div class="kpi-num" id="exp-years">4+</div>
+          <div class="kpi-label">anni di esperienza professionale</div>
+        </div>
+      </section>
+
+      <section>
+        <div class="sec-title">Differenziatori</div>
+        <div class="callout">
+          <div class="callout-label">AI Engineering</div>
+          <div class="callout-text">Uso avanzato di LLM, agenti AI e MCP per costruire workflow intelligenti e automatizzare task complessi.</div>
+        </div>
+        <div class="callout gold-variant">
+          <div class="callout-label">Docenza universitaria</div>
+          <div class="callout-text">Corso AI applicata al coding, Università di Cagliari, Aprile 2026 — 8 ore.</div>
+        </div>
+      </section>
+
+      <section>
+        <div class="sec-title">Competenze</div>
+
+        <div class="skill-cat">AI & LLM</div>
+        <div class="skill-list">
+          <span class="sk strong">Agenti AI</span>
+          <span class="sk strong">MCP</span>
+          <span class="sk strong">Prompt Eng.</span>
+          <span class="sk">OpenAI API</span>
+          <span class="sk">Anthropic API</span>
+          <span class="sk">Tool Use</span>
+          <span class="sk">Sub-agents</span>
+          <span class="sk">Hugging Face</span>
+          <span class="sk">Ollama</span>
+          <span class="sk">LLM Eval</span>
+        </div>
+
+        <div class="skill-cat">Agentic Coding</div>
+        <div class="skill-list">
+          <span class="sk strong">Claude Code</span>
+          <span class="sk strong">Windsurf</span>
+          <span class="sk">Gemini CLI</span>
+          <span class="sk">OpenCode</span>
+          <span class="sk">Kiro</span>
+        </div>
+
+        <div class="skill-cat">Data Science</div>
+        <div class="skill-list">
+          <span class="sk strong">Python</span>
+          <span class="sk strong">SQL</span>
+          <span class="sk strong">NLP</span>
+          <span class="sk strong">Sentiment Analysis</span>
+          <span class="sk">Pandas</span>
+          <span class="sk">Time Series</span>
+          <span class="sk">Computer Vision</span>
+        </div>
+
+        <div class="skill-cat">Business Intelligence</div>
+        <div class="skill-list">
+          <span class="sk">Power BI</span>
+          <span class="sk">QuickSight</span>
+          <span class="sk">Tableau</span>
+          <span class="sk">Looker Studio</span>
+        </div>
+
+        <div class="skill-cat">MLOps & Cloud</div>
+        <div class="skill-list">
+          <span class="sk">Docker</span>
+          <span class="sk">FastAPI</span>
+          <span class="sk">AWS S3</span>
+          <span class="sk">Athena</span>
+          <span class="sk">Flask</span>
+          <span class="sk">GitHub</span>
+        </div>
+      </section>
+
+      <section>
+        <div class="sec-title">Lingue</div>
+        <div class="lang-row">
+          <span class="lang-name">Italiano</span>
+          <span class="lang-badge native">Madrelingua</span>
+        </div>
+        <div class="lang-row">
+          <span class="lang-name">Inglese</span>
+          <span class="lang-badge">B2</span>
+        </div>
+      </section>
+
+
+    </div>
+  </div>
+
+
+</div>
+<script>
+  (function() {
+    const start = new Date(2021, 10, 1); // novembre 2021
+    const now = new Date();
+    const years = Math.floor((now - start) / (1000 * 60 * 60 * 24 * 365.25));
+    const kpi = document.getElementById('exp-years');
+    const intro = document.getElementById('exp-years-text');
+    if (kpi) kpi.textContent = years + '+';
+    if (intro) intro.textContent = years;
+  })();
+</script>
+</body>
+</html>

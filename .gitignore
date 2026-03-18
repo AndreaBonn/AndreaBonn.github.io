@@ -1,0 +1,7 @@
+# Ignora tutto
+*
+
+# Eccezioni: file da tracciare
+!.gitignore
+!index.html
+!andrea_bonacci_cv.pdf

@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Andrea Bonacci — Data Analyst & AI Engineer</title>
+<title>Andrea Bonacci — CV PDF</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -28,10 +27,10 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   body {
-    background: var(--bg);
+    background: white;
     color: var(--ink);
     font-family: 'Jost', sans-serif;
-    font-size: 15.5px;
+    font-size: 14px;
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
   }
@@ -39,28 +38,27 @@
   .page {
     max-width: 1060px;
     margin: 0 auto;
-    padding: 60px 56px;
-    animation: fadeIn 0.5s ease both;
+    padding: 20px 30px;
   }
 
   header {
     display: grid;
     grid-template-columns: 1fr auto;
-    gap: 48px;
+    gap: 20px;
     align-items: end;
-    padding-bottom: 32px;
+    padding-bottom: 12px;
     border-bottom: 1.5px solid var(--ink);
-    margin-bottom: 40px;
+    margin-bottom: 14px;
   }
 
   .name-block h1 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 58px;
+    font-size: 42px;
     font-weight: 300;
     line-height: 1;
     letter-spacing: -0.5px;
     color: var(--ink);
-    margin-bottom: 10px;
+    margin-bottom: 3px;
   }
 
   .name-block h1 em {
@@ -73,7 +71,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 13.5px;
+    font-size: 12px;
     font-weight: 500;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -98,75 +96,34 @@
   .contact-item {
     display: flex;
     align-items: center;
-    gap: 7px;
+    gap: 4px;
     color: var(--ink-mid);
-    font-size: 14px;
+    font-size: 12.5px;
     text-decoration: none;
-    transition: color 0.2s;
     font-weight: 300;
   }
 
-  .contact-item:hover { color: var(--blue); }
-
-  .pdf-download {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    margin-top: 4px;
-    padding: 5px 14px;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    color: var(--surface);
-    background: var(--blue);
-    border-radius: 3px;
-    text-decoration: none;
-    transition: background 0.2s, transform 0.1s;
-  }
-
-  .pdf-download:hover { background: #163d6b; transform: translateY(-1px); }
-  .pdf-download .c-icon { color: var(--surface); }
-
-  .lang-switch {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    margin-top: 4px;
-    padding: 5px 12px;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    color: var(--ink-mid);
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 3px;
-    text-decoration: none;
-    transition: border-color 0.2s, color 0.2s, transform 0.1s;
-  }
-
-  .lang-switch:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-1px); }
-
   .c-icon {
-    width: 15px;
-    height: 15px;
+    width: 11px;
+    height: 11px;
     color: var(--ink-faint);
     flex-shrink: 0;
   }
 
   .body-grid {
     display: grid;
-    grid-template-columns: 1fr 280px;
-    gap: 56px;
+    grid-template-columns: 1fr 240px;
+    gap: 24px;
   }
 
   .sec-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 12.5px;
+    font-size: 11.5px;
     font-weight: 600;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--ink-soft);
-    margin-bottom: 20px;
+    margin-bottom: 6px;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -180,16 +137,16 @@
     background: var(--gold);
   }
 
-  section { margin-bottom: 36px; }
+  section { margin-bottom: 10px; }
 
   .intro-text {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 19px;
+    font-size: 15px;
     font-weight: 300;
-    line-height: 1.75;
+    line-height: 1.45;
     color: var(--ink-mid);
     font-style: italic;
-    padding-left: 20px;
+    padding-left: 12px;
     border-left: 2px solid var(--gold);
   }
 
@@ -200,8 +157,8 @@
   }
 
   .exp-item {
-    margin-bottom: 24px;
-    padding-bottom: 24px;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
     border-bottom: 1px solid var(--rule);
   }
 
@@ -220,7 +177,7 @@
   }
 
   .exp-role {
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 500;
     color: var(--ink);
     letter-spacing: -0.01em;
@@ -228,39 +185,39 @@
 
   .exp-period {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
+    font-size: 11px;
     color: var(--ink-faint);
     white-space: nowrap;
     font-weight: 300;
   }
 
   .exp-company {
-    font-size: 13.5px;
+    font-size: 12px;
     color: var(--blue);
     font-weight: 500;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
   }
 
   .exp-desc {
     color: var(--ink-mid);
-    font-size: 15px;
-    line-height: 1.7;
+    font-size: 13.5px;
+    line-height: 1.45;
     font-weight: 300;
-    margin-bottom: 12px;
+    margin-bottom: 5px;
   }
 
   .exp-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 3px;
   }
 
   .tag {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
-    padding: 3px 10px;
+    font-size: 11px;
+    padding: 2px 6px;
     border-radius: 2px;
     font-weight: 300;
   }
@@ -274,7 +231,7 @@
     display: grid;
     grid-template-columns: 1fr auto;
     gap: 16px;
-    padding: 12px 0;
+    padding: 5px 0;
     border-bottom: 1px solid var(--rule);
     align-items: start;
   }
@@ -283,14 +240,14 @@
   .edu-item:last-child  { border-bottom: none; padding-bottom: 0; }
 
   .edu-degree {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
     color: var(--ink);
     margin-bottom: 2px;
   }
 
   .edu-place {
-    font-size: 13.5px;
+    font-size: 12px;
     color: var(--ink-soft);
     font-weight: 300;
   }
@@ -299,7 +256,7 @@
 
   .edu-grade {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;
+    font-size: 19px;
     font-weight: 500;
     color: var(--blue);
     line-height: 1;
@@ -313,17 +270,17 @@
     font-weight: 300;
   }
 
-  .sidebar { border-left: 1px solid var(--rule); padding-left: 32px; }
-  .sidebar section { margin-bottom: 28px; }
+  .sidebar { border-left: 1px solid var(--rule); padding-left: 18px; }
+  .sidebar section { margin-bottom: 8px; }
 
   .skill-cat {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
+    font-size: 9.5px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--gold);
-    margin-bottom: 7px;
-    margin-top: 14px;
+    margin-bottom: 3px;
+    margin-top: 6px;
     font-weight: 400;
   }
 
@@ -332,21 +289,18 @@
   .skill-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 3px;
   }
 
   .sk {
-    font-size: 13.5px;
-    padding: 4px 10px;
+    font-size: 12px;
+    padding: 2px 7px;
     border-radius: 2px;
     background: var(--surface);
     border: 1px solid var(--border);
     color: var(--ink-mid);
     font-weight: 300;
-    transition: all 0.15s;
   }
-
-  .sk:hover { border-color: var(--blue); color: var(--blue); }
 
   .sk.strong {
     background: var(--blue-light);
@@ -355,26 +309,17 @@
     font-weight: 500;
   }
 
-  .kpi-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-  }
-
   .kpi {
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 3px;
-    padding: 10px 10px 8px;
+    padding: 7px 7px 5px;
     text-align: center;
-    transition: border-color 0.2s;
   }
-
-  .kpi:hover { border-color: var(--blue); }
 
   .kpi-num {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 500;
     color: var(--blue);
     line-height: 1;
@@ -382,7 +327,7 @@
   }
 
   .kpi-label {
-    font-size: 11.5px;
+    font-size: 10px;
     color: var(--ink-soft);
     line-height: 1.3;
     font-weight: 300;
@@ -392,17 +337,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 7px 0;
+    padding: 4px 0;
     border-bottom: 1px solid var(--rule);
   }
 
   .lang-row:last-child { border-bottom: none; }
-  .lang-name { font-size: 14.5px; color: var(--ink); font-weight: 400; }
+  .lang-name { font-size: 13px; color: var(--ink); font-weight: 400; }
 
   .lang-badge {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 11.5px;
-    padding: 3px 8px;
+    font-size: 11px;
+    padding: 2px 6px;
     border-radius: 2px;
     background: var(--bg2);
     color: var(--ink-soft);
@@ -411,34 +356,17 @@
 
   .lang-badge.native { background: var(--green-light); color: var(--green); }
 
-  .link-row {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 7px 0;
-    text-decoration: none;
-    color: var(--ink-mid);
-    font-size: 13.5px;
-    font-weight: 300;
-    border-bottom: 1px solid var(--rule);
-    transition: color 0.2s;
-  }
-
-  .link-row:last-child { border-bottom: none; }
-  .link-row:hover { color: var(--blue); }
-  .link-icon { color: var(--ink-faint); font-size: 11px; }
-
   .callout {
     background: var(--blue-light);
     border-left: 2px solid var(--blue);
     border-radius: 2px;
-    padding: 12px 14px;
-    margin-bottom: 8px;
+    padding: 6px 9px;
+    margin-bottom: 4px;
   }
 
   .callout-label {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 10.5px;
+    font-size: 9px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--blue);
@@ -447,10 +375,10 @@
   }
 
   .callout-text {
-    font-size: 14px;
+    font-size: 12.5px;
     color: var(--ink-mid);
     font-weight: 300;
-    line-height: 1.5;
+    line-height: 1.35;
   }
 
   .callout.gold-variant {
@@ -459,66 +387,6 @@
   }
 
   .callout.gold-variant .callout-label { color: var(--gold); }
-
-
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
-  .print-only { display: none; }
-
-  @media print {
-    .screen-only { display: none !important; }
-    .print-only { display: block !important; }
-    body { background: white; font-size: 14px; }
-    .pdf-download { display: none; }
-    .lang-switch { display: none; }
-    .page { padding: 20px 30px; }
-    header { padding-bottom: 12px; margin-bottom: 14px; gap: 20px; }
-    .name-block h1 { font-size: 42px; margin-bottom: 3px; }
-    .subtitle { font-size: 12px; }
-    .contact-item { font-size: 12.5px; gap: 4px; }
-    .c-icon { width: 11px; height: 11px; }
-    .intro-text { font-size: 15px; line-height: 1.45; padding-left: 12px; }
-    section { margin-bottom: 10px; }
-    .sec-title { margin-bottom: 6px; font-size: 11.5px; }
-    .exp-item { margin-bottom: 8px; padding-bottom: 8px; }
-    .exp-role { font-size: 15px; }
-    .exp-company { font-size: 12px; margin-bottom: 4px; }
-    .exp-desc { font-size: 13.5px; line-height: 1.45; margin-bottom: 5px; }
-    .exp-period { font-size: 11px; }
-    .tag { font-size: 11px; padding: 2px 6px; }
-    .exp-tags { gap: 3px; }
-    .body-grid { gap: 24px; grid-template-columns: 1fr 240px; }
-    .sidebar { padding-left: 18px; }
-    .sidebar section { margin-bottom: 8px; }
-    .skill-cat { margin-top: 6px; margin-bottom: 3px; font-size: 9.5px; }
-    .sk { font-size: 12px; padding: 2px 7px; }
-    .skill-list { gap: 3px; }
-    .edu-item { padding: 5px 0; }
-    .edu-degree { font-size: 14px; }
-    .edu-place { font-size: 12px; }
-    .edu-grade { font-size: 19px; }
-    .kpi { padding: 7px 7px 5px; }
-    .kpi-num { font-size: 24px; }
-    .kpi-label { font-size: 10px; }
-    .callout { padding: 6px 9px; margin-bottom: 4px; }
-    .callout-label { font-size: 9px; }
-    .callout-text { font-size: 12.5px; line-height: 1.35; }
-    .lang-row { padding: 4px 0; }
-    .lang-name { font-size: 13px; }
-    .lang-badge { font-size: 11px; padding: 2px 6px; }
-    .link-row { font-size: 12px; padding: 4px 0; }
-  }
-
-  @media (max-width: 768px) {
-    .body-grid { grid-template-columns: 1fr; }
-    .sidebar { border-left: none; padding-left: 0; border-top: 1px solid var(--rule); padding-top: 28px; }
-    header { grid-template-columns: 1fr; }
-    .contact-block { align-items: flex-start; }
-    .name-block h1 { font-size: 40px; }
-  }
 </style>
 </head>
 <body>
@@ -542,26 +410,18 @@
         <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         andreabonacci95@protonmail.com
       </a>
-      <a href="https://it.linkedin.com/in/andrea-bonacci-b017b0196" target="_blank" class="contact-item">
+      <a href="https://it.linkedin.com/in/andrea-bonacci-b017b0196" class="contact-item">
         <svg class="c-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
         linkedin.com/in/andrea-bonacci
       </a>
-      <a href="https://github.com/AndreaBonn" target="_blank" class="contact-item">
+      <a href="https://github.com/AndreaBonn" class="contact-item">
         <svg class="c-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
         github.com/AndreaBonn
       </a>
       <span class="contact-item">
         <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        Cagliari, Italia
+        Cagliari, Italy
       </span>
-      <a href="andrea_bonacci_cv.pdf" download target="_blank" class="pdf-download">
-        <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Scarica PDF
-      </a>
-      <a href="en.html" class="lang-switch">
-        <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-        English
-      </a>
     </div>
   </header>
 
@@ -570,34 +430,28 @@
     <div class="left-col">
 
       <section>
-        <div class="sec-title">Profilo</div>
-        <p class="intro-text screen-only">
-          Data Analyst e AI Engineer con <strong>oltre <span id="exp-years-text">4</span> anni di esperienza</strong> in consulenza data-driven per clienti enterprise. Progetto pipeline di analisi end-to-end, dashboard BI e modelli NLP — dall'ETL al deploy in produzione con FastAPI e Docker. Oggi il mio focus è sull'<strong>AI Engineering</strong>: sviluppo agenti AI e workflow agentici con MCP, tool use e integrazione LLM, portando l'AI generativa dal prototipo al valore di business. Background in Data Science ed Economia Aziendale, ho anche tenuto un <strong>corso universitario</strong> intensivo di 8 ore su AI applicata al coding.
-        </p>
-        <p class="intro-text print-only">
-          Data Analyst e AI Engineer con <strong>oltre <span>4</span> anni di esperienza</strong> in consulenza data-driven per clienti enterprise. Pipeline di analisi end-to-end, dashboard BI e modelli NLP. Focus attuale sull'<strong>AI Engineering</strong>: agenti AI, workflow agentici con MCP e integrazione LLM in produzione. Ho anche tenuto un <strong>corso universitario</strong> intensivo di 8 ore su AI applicata al coding.
+        <div class="sec-title">Profile</div>
+        <p class="intro-text">
+          Data Analyst and AI Engineer with <strong>over <span id="exp-years-text">4</span> years of experience</strong> in data-driven consulting for enterprise clients. End-to-end analytics pipelines, BI dashboards and NLP models. Current focus on <strong>AI Engineering</strong>: AI agents, agentic workflows with MCP and LLM integration in production. I also delivered an intensive <strong>8-hour university course</strong> on AI applied to coding.
         </p>
       </section>
 
       <section>
-        <div class="sec-title">Esperienza professionale</div>
+        <div class="sec-title">Professional Experience</div>
 
         <div class="exp-item">
           <div class="exp-meta">
             <div class="exp-role">Data Analyst & AI Engineer</div>
-            <div class="exp-period">Nov 2021 → presente</div>
+            <div class="exp-period">Nov 2021 → present</div>
           </div>
           <div class="exp-company">Linkalab S.r.l. · Cagliari</div>
-          <div class="exp-desc screen-only">
-            Pipeline di analisi dati end-to-end per clienti enterprise. Dashboard interattive con Power BI, QuickSight, Tableau e Looker Studio. Integrazione di LLM via API OpenAI e Anthropic; sviluppo di agenti AI con MCP, tool use, sub-agents, skills e rules. Uso avanzato di Claude Code, Windsurf e Gemini CLI in produzione. NLP, sentiment analysis, time series e SHAP/LIME. Deploy con FastAPI e Docker.
-          </div>
-          <div class="exp-desc print-only">
-            Pipeline dati end-to-end e dashboard BI (Power BI, QuickSight, Tableau, Looker Studio) per clienti enterprise. Sviluppo agenti AI con MCP, tool use e integrazione LLM (OpenAI, Anthropic). NLP, sentiment analysis, time series. Deploy con FastAPI e Docker.
+          <div class="exp-desc">
+            End-to-end data pipelines and BI dashboards (Power BI, QuickSight, Tableau, Looker Studio) for enterprise clients. AI agent development with MCP, tool use and LLM integration (OpenAI, Anthropic). NLP, sentiment analysis, time series. Deployment with FastAPI and Docker.
           </div>
           <div class="exp-tags">
             <span class="tag tag-blue">Python</span>
             <span class="tag tag-blue">SQL</span>
-            <span class="tag tag-green">Agenti AI</span>
+            <span class="tag tag-green">AI Agents</span>
             <span class="tag tag-green">MCP</span>
             <span class="tag tag-green">LLM Integration</span>
             <span class="tag tag-gold">Power BI</span>
@@ -611,41 +465,35 @@
 
         <div class="exp-item">
           <div class="exp-meta">
-            <div class="exp-role">Speaker — Corso Universitario</div>
-            <div class="exp-period">Aprile 2026</div>
+            <div class="exp-role">Speaker — University Course</div>
+            <div class="exp-period">April 2026</div>
           </div>
-          <div class="exp-company">Università degli Studi di Cagliari</div>
-          <div class="exp-desc screen-only">
-            Progettazione e conduzione di due sessioni intensive (<strong>8 ore totali</strong>) su <em>"Intelligenza Artificiale applicata al Coding"</em>. Il programma ha coperto: architettura dei Large Language Models, prompt engineering avanzato, coding agentico con strumenti CLI, integrazione del Model Context Protocol (MCP) e creazione di Skills personalizzate per agenti AI. Il corso ha incluso workshop pratici su IDE agentici e automazione dei workflow di sviluppo software.
-          </div>
-          <div class="exp-desc print-only">
-            Due sessioni intensive (<strong>8 ore totali</strong>) su <em>"AI applicata al Coding"</em>: architettura LLM, prompt engineering avanzato, coding agentico con CLI, integrazione MCP e creazione di Skills per agenti AI. Workshop pratici su IDE agentici.
+          <div class="exp-company">University of Cagliari</div>
+          <div class="exp-desc">
+            Two intensive sessions (<strong>8 hours total</strong>) on <em>"AI Applied to Coding"</em>: LLM architecture, advanced prompt engineering, agentic coding with CLI, MCP integration and custom Skills for AI agents. Hands-on workshops on agentic IDEs.
           </div>
           <div class="exp-tags">
-            <span class="tag tag-green">AI per Coding</span>
+            <span class="tag tag-green">AI for Coding</span>
             <span class="tag tag-green">Prompt Engineering</span>
             <span class="tag tag-blue">LLM</span>
             <span class="tag tag-green">MCP</span>
-            <span class="tag tag-plain">Formazione universitaria</span>
+            <span class="tag tag-plain">University Lecture</span>
           </div>
         </div>
 
       </section>
 
       <section>
-        <div class="sec-title">Progetti & Open Source</div>
+        <div class="sec-title">Projects & Open Source</div>
 
         <div class="exp-item">
           <div class="exp-meta">
-            <div class="exp-role">Web App, Estensioni Chrome & Pipeline LLM</div>
-            <div class="exp-period">In corso</div>
+            <div class="exp-role">Web Apps, Chrome Extensions & LLM Pipelines</div>
+            <div class="exp-period">Ongoing</div>
           </div>
-          <div class="exp-company"><a href="https://github.com/AndreaBonn" target="_blank" style="color:var(--blue);text-decoration:none;">github.com/AndreaBonn</a></div>
-          <div class="exp-desc screen-only">
-            Web app accessibili pubblicamente, estensioni Chrome e pipeline LLM end-to-end. Esplorazione di interfacce data-driven e tool per la produttività.
-          </div>
-          <div class="exp-desc print-only">
-            Web app pubbliche, estensioni Chrome e pipeline LLM end-to-end. Interfacce data-driven e tool per la produttività.
+          <div class="exp-company"><a href="https://github.com/AndreaBonn" style="color:var(--blue);text-decoration:none;">github.com/AndreaBonn</a></div>
+          <div class="exp-desc">
+            Public web apps, Chrome extensions and end-to-end LLM pipelines. Data-driven interfaces and productivity tools.
           </div>
           <div class="exp-tags">
             <span class="tag tag-blue">Web App</span>
@@ -657,37 +505,37 @@
       </section>
 
       <section>
-        <div class="sec-title">Formazione</div>
+        <div class="sec-title">Education</div>
 
         <div class="edu-item">
           <div>
-            <div class="edu-degree">Laurea Magistrale — Data Science & Business Informatics</div>
-            <div class="edu-place">Università di Pisa</div>
-            <div style="font-size:11.5px;color:var(--ink-soft);font-weight:300;margin-top:4px;font-style:italic;">Tesi: Emotion Analysis in italiano per monitorare la reputazione online</div>
+            <div class="edu-degree">Master's Degree — Data Science & Business Informatics</div>
+            <div class="edu-place">University of Pisa</div>
+            <div style="font-size:11.5px;color:var(--ink-soft);font-weight:300;margin-top:4px;font-style:italic;">Thesis: Italian Emotion Analysis for online reputation monitoring</div>
           </div>
           <div class="edu-right">
-            <div class="edu-grade">101</div>
+            <div class="edu-grade">101<span style="font-size:12px;color:var(--ink-soft);font-weight:300;">/110</span></div>
             <div class="edu-year">2022</div>
           </div>
         </div>
 
         <div class="edu-item">
           <div>
-            <div class="edu-degree">Laurea Triennale — Economia Aziendale</div>
-            <div class="edu-place">Università di Pisa</div>
+            <div class="edu-degree">Bachelor's Degree — Business Administration</div>
+            <div class="edu-place">University of Pisa</div>
           </div>
           <div class="edu-right">
-            <div class="edu-grade">101</div>
+            <div class="edu-grade">101<span style="font-size:12px;color:var(--ink-soft);font-weight:300;">/110</span></div>
             <div class="edu-year">2018</div>
           </div>
         </div>
 
         <div class="edu-item">
           <div>
-            <div class="edu-degree">Diploma — Liceo Scientifico L. B. Alberti</div>
+            <div class="edu-degree">High School Diploma — Liceo Scientifico L. B. Alberti</div>
           </div>
           <div class="edu-right">
-            <div class="edu-grade" style="font-size:20px">95</div>
+            <div class="edu-grade" style="font-size:17px">95<span style="font-size:11px;color:var(--ink-soft);font-weight:300;">/100</span></div>
             <div class="edu-year">2014</div>
           </div>
         </div>
@@ -699,31 +547,31 @@
     <div class="sidebar">
 
       <section>
-        <div class="sec-title">In sintesi</div>
+        <div class="sec-title">At a Glance</div>
         <div class="kpi" style="max-width:140px;">
           <div class="kpi-num" id="exp-years">4+</div>
-          <div class="kpi-label">anni di esperienza professionale</div>
+          <div class="kpi-label">years of professional experience</div>
         </div>
       </section>
 
       <section>
-        <div class="sec-title">Differenziatori</div>
+        <div class="sec-title">Differentiators</div>
         <div class="callout">
           <div class="callout-label">AI Engineering</div>
-          <div class="callout-text">Uso avanzato di LLM, agenti AI e MCP per costruire workflow intelligenti e automatizzare task complessi.</div>
+          <div class="callout-text">Advanced use of LLMs, AI agents and MCP to build intelligent workflows and automate complex tasks.</div>
         </div>
         <div class="callout gold-variant">
-          <div class="callout-label">Speaker universitario</div>
-          <div class="callout-text">Corso AI applicata al coding, Università di Cagliari, Aprile 2026 — 8 ore.</div>
+          <div class="callout-label">University Speaker</div>
+          <div class="callout-text">AI applied to coding course, University of Cagliari, April 2026 — 8 hours.</div>
         </div>
       </section>
 
       <section>
-        <div class="sec-title">Competenze</div>
+        <div class="sec-title">Skills</div>
 
         <div class="skill-cat">AI & LLM</div>
         <div class="skill-list">
-          <span class="sk strong">Agenti AI</span>
+          <span class="sk strong">AI Agents</span>
           <span class="sk strong">MCP</span>
           <span class="sk strong">Prompt Eng.</span>
           <span class="sk">OpenAI API</span>
@@ -775,26 +623,24 @@
       </section>
 
       <section>
-        <div class="sec-title">Lingue</div>
+        <div class="sec-title">Languages</div>
         <div class="lang-row">
-          <span class="lang-name">Italiano</span>
-          <span class="lang-badge native">Madrelingua</span>
+          <span class="lang-name">Italian</span>
+          <span class="lang-badge native">Native</span>
         </div>
         <div class="lang-row">
-          <span class="lang-name">Inglese</span>
+          <span class="lang-name">English</span>
           <span class="lang-badge">B2</span>
         </div>
       </section>
 
-
     </div>
   </div>
-
 
 </div>
 <script>
   (function() {
-    const start = new Date(2021, 10, 1); // novembre 2021
+    const start = new Date(2021, 10, 1);
     const now = new Date();
     const years = Math.floor((now - start) / (1000 * 60 * 60 * 24 * 365.25));
     const kpi = document.getElementById('exp-years');

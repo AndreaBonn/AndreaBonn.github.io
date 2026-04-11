@@ -387,6 +387,80 @@
   }
 
   .callout.gold-variant .callout-label { color: var(--gold); }
+
+  .exp-company-block {
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .exp-company-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 2px;
+  }
+
+  .exp-company-name {
+    font-size: 12px;
+    color: var(--blue);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .exp-company-subtitle {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--gold);
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+  }
+
+  .exp-timeline {
+    border-left: 2px solid var(--border);
+    padding-left: 14px;
+    margin-left: 4px;
+  }
+
+  .exp-sub-item {
+    position: relative;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .exp-sub-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .exp-sub-item::before {
+    content: '';
+    position: absolute;
+    left: -18px;
+    top: 6px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--blue);
+    border: 2px solid white;
+  }
+
+  .exp-sub-item.minor::before {
+    background: var(--border-strong);
+    width: 5px;
+    height: 5px;
+    left: -17px;
+  }
+
+  .role-qualifier {
+    font-weight: 300;
+    color: var(--ink-soft);
+    font-size: 12px;
+  }
 </style>
 </head>
 <body>
@@ -443,29 +517,71 @@
       <section>
         <div class="sec-title">Esperienza professionale</div>
 
-        <div class="exp-item">
-          <div class="exp-meta">
-            <div class="exp-role">Data Analyst & AI Engineer</div>
+        <div class="exp-company-block">
+          <div class="exp-company-header">
+            <div class="exp-company-name">Linkalab S.r.l. · Cagliari</div>
             <div class="exp-period">Nov 2021 → presente</div>
           </div>
-          <div class="exp-company">Linkalab S.r.l. · Cagliari</div>
-          <div class="exp-desc">
-            Pipeline dati end-to-end e dashboard BI (Power BI, QuickSight, Tableau, Looker Studio) per clienti enterprise. Sviluppo agenti AI con MCP, tool use e integrazione LLM (OpenAI, Anthropic). NLP, sentiment analysis, time series e SHAP/LIME. Deploy con FastAPI e Docker. Tutor accademico per tirocinanti universitari: supervisione, percorsi formativi e valutazione. Conduzione colloqui tecnici per hiring Data Scientist e AI Engineer post-acquisizione.
-          </div>
-          <div class="exp-tags">
-            <span class="tag tag-blue">Python</span>
-            <span class="tag tag-blue">SQL</span>
-            <span class="tag tag-green">Agenti AI</span>
-            <span class="tag tag-green">MCP</span>
-            <span class="tag tag-green">LLM Integration</span>
-            <span class="tag tag-gold">Power BI</span>
-            <span class="tag tag-gold">QuickSight</span>
-            <span class="tag tag-gold">Tableau</span>
-            <span class="tag tag-plain">Docker</span>
-            <span class="tag tag-plain">FastAPI</span>
-            <span class="tag tag-plain">AWS S3/Athena</span>
-            <span class="tag tag-gold">Tutor Accademico</span>
-            <span class="tag tag-gold">Technical Hiring</span>
+          <div class="exp-company-subtitle">Crescita interna · 4 ruoli</div>
+
+          <div class="exp-timeline">
+
+            <div class="exp-sub-item">
+              <div class="exp-meta">
+                <div class="exp-role">Data Analyst & AI Engineer</div>
+                <div class="exp-period">Ott 2025 → presente</div>
+              </div>
+              <div class="exp-desc">
+                Focus AI Engineering: agenti AI e workflow agentici con MCP, tool use, sub-agents e integrazione LLM (OpenAI, Anthropic). Claude Code, Windsurf e Gemini CLI in produzione. Tutor accademico per tirocinanti universitari. Colloqui tecnici per hiring Data Scientist e AI Engineer post-acquisizione.
+              </div>
+              <div class="exp-tags">
+                <span class="tag tag-green">Agenti AI</span>
+                <span class="tag tag-green">MCP</span>
+                <span class="tag tag-green">LLM Integration</span>
+                <span class="tag tag-green">Tool Use</span>
+                <span class="tag tag-blue">Claude Code</span>
+                <span class="tag tag-gold">Tutor Accademico</span>
+                <span class="tag tag-gold">Technical Hiring</span>
+              </div>
+            </div>
+
+            <div class="exp-sub-item">
+              <div class="exp-meta">
+                <div class="exp-role">Data Analyst & Data Scientist</div>
+                <div class="exp-period">Lug 2022 → Ott 2025</div>
+              </div>
+              <div class="exp-desc">
+                Pipeline dati end-to-end e dashboard BI (Power BI, QuickSight, Tableau, Looker Studio) per clienti enterprise. NLP, sentiment analysis, time series. Deploy con FastAPI e Docker su AWS.
+              </div>
+              <div class="exp-tags">
+                <span class="tag tag-blue">Python</span>
+                <span class="tag tag-blue">SQL</span>
+                <span class="tag tag-gold">Power BI</span>
+                <span class="tag tag-gold">QuickSight</span>
+                <span class="tag tag-gold">Tableau</span>
+                <span class="tag tag-blue">NLP</span>
+                <span class="tag tag-plain">FastAPI</span>
+                <span class="tag tag-plain">Docker</span>
+                <span class="tag tag-plain">AWS S3/Athena</span>
+              </div>
+            </div>
+
+            <div class="exp-sub-item minor">
+              <div class="exp-meta">
+                <div class="exp-role">Data Scientist <span class="role-qualifier">— contratto</span></div>
+                <div class="exp-period">Apr 2022 → Giu 2022</div>
+              </div>
+              <div class="exp-desc">Conferma post-tirocinio. Primi progetti autonomi di analisi dati e modellazione per clienti enterprise.</div>
+            </div>
+
+            <div class="exp-sub-item minor">
+              <div class="exp-meta">
+                <div class="exp-role">Data Scientist <span class="role-qualifier">— stage curriculare</span></div>
+                <div class="exp-period">Nov 2021 → Mar 2022</div>
+              </div>
+              <div class="exp-desc">Tirocinio curriculare per tesi magistrale. Sviluppo del sistema di Emotion Analysis in italiano per il monitoraggio della reputazione online.</div>
+            </div>
+
           </div>
         </div>
 

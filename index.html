@@ -45,12 +45,28 @@
 
   header {
     display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 48px;
+    grid-template-columns: auto 1fr auto;
+    gap: 32px;
     align-items: end;
     padding-bottom: 32px;
     border-bottom: 1.5px solid var(--ink);
     margin-bottom: 40px;
+  }
+
+  .photo-block {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--border);
+    flex-shrink: 0;
+    align-self: center;
+  }
+
+  .photo-block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .name-block h1 {
@@ -550,7 +566,8 @@
     .pdf-download { display: none; }
     .lang-switch { display: none; }
     .page { padding: 20px 30px; }
-    header { padding-bottom: 12px; margin-bottom: 14px; gap: 20px; }
+    header { padding-bottom: 12px; margin-bottom: 14px; gap: 14px; }
+    .photo-block { width: 80px; height: 80px; }
     .name-block h1 { font-size: 42px; margin-bottom: 3px; }
     .subtitle { font-size: 12px; }
     .contact-item { font-size: 12.5px; gap: 4px; }
@@ -597,9 +614,10 @@
   @media (max-width: 768px) {
     .body-grid { grid-template-columns: 1fr; }
     .sidebar { border-left: none; padding-left: 0; border-top: 1px solid var(--rule); padding-top: 28px; }
-    header { grid-template-columns: 1fr; }
-    .contact-block { align-items: flex-start; }
+    header { grid-template-columns: auto 1fr; }
+    .contact-block { align-items: flex-start; grid-column: 1 / -1; }
     .name-block h1 { font-size: 40px; }
+    .photo-block { width: 80px; height: 80px; }
   }
 </style>
 </head>
@@ -607,6 +625,9 @@
 <div class="page">
 
   <header>
+    <div class="photo-block">
+      <img src="assets/foto-profilo-crop.jpg" alt="Andrea Bonacci">
+    </div>
     <div class="name-block">
       <h1>Andrea <em>Bonacci</em></h1>
       <div class="subtitle">

@@ -288,7 +288,7 @@
     font-weight: 400;
   }
 
-  .skill-cat:first-child { margin-top: 0; }
+  .skill-group:first-child .skill-cat { margin-top: 0; }
 
   .skill-list {
     display: flex;
@@ -473,6 +473,10 @@
   .exp-sub-item {
     break-inside: avoid;
   }
+
+  .skill-group {
+    break-inside: avoid;
+  }
 </style>
 </head>
 <body>
@@ -619,7 +623,7 @@
 
       <section>
         <div class="sec-title">Personal Projects & Open Source</div>
-        <div class="exp-company" style="margin-bottom:8px;"><a href="https://github.com/AndreaBonn" style="color:var(--blue);text-decoration:none;">github.com/AndreaBonn</a> · 12 public repositories</div>
+        <div class="exp-company" style="margin-bottom:8px;"><a href="https://github.com/AndreaBonn" style="color:var(--blue);text-decoration:none;">github.com/AndreaBonn</a> · 13 public repositories</div>
 
         <div class="exp-item">
           <div class="exp-meta">
@@ -660,13 +664,15 @@
             <div class="exp-period">Ongoing</div>
           </div>
           <div class="exp-desc">
-            Tools to streamline daily Unix workflows: <a href="https://github.com/AndreaBonn/nautilus-extensions" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">file manager extensions</a>, <a href="https://github.com/AndreaBonn/cli-image-paste" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">clipboard image CLI</a>, and <a href="https://github.com/AndreaBonn/audio-filename-fixer" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">audio renaming via AcoustID</a>.
+            Tools to streamline daily workflows: <a href="https://github.com/AndreaBonn/nautilus-extensions" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">file manager extensions</a>, <a href="https://github.com/AndreaBonn/cli-image-paste" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">clipboard image CLI</a>, <a href="https://github.com/AndreaBonn/audio-filename-fixer" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">audio renaming via AcoustID</a>, and <a href="https://github.com/AndreaBonn/dipendenti-in-cloud-notifier" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">smart clock-in notifications</a>.
           </div>
           <div class="exp-tags">
             <span class="tag tag-blue">Python</span>
+            <span class="tag tag-blue">JavaScript</span>
             <span class="tag tag-plain">Shell</span>
             <span class="tag tag-plain">Linux</span>
             <span class="tag tag-plain">CLI</span>
+            <span class="tag tag-plain">Chrome Extension</span>
             <span class="tag tag-plain">AcoustID</span>
           </div>
         </div>
@@ -711,7 +717,7 @@
             <div class="kpi-label">years of professional experience</div>
           </div>
           <div class="kpi" style="flex:1;">
-            <div class="kpi-num">12+</div>
+            <div class="kpi-num">13+</div>
             <div class="kpi-label">open source projects</div>
           </div>
         </div>
@@ -740,48 +746,56 @@
       <section>
         <div class="sec-title">Skills</div>
 
-        <div class="skill-cat">AI & LLM</div>
-        <div class="skill-list">
-          <span class="sk strong">AI Agents</span>
-          <span class="sk strong">MCP</span>
-          <span class="sk strong">Prompt Eng.</span>
-          <span class="sk">OpenAI API</span>
-          <span class="sk">Anthropic API</span>
-          <span class="sk">Tool Use</span>
-          <span class="sk">Sub-agents</span>
-          <span class="sk">Hugging Face</span>
-          <span class="sk">Ollama</span>
-          <span class="sk">LLM Eval</span>
-          <span class="sk">Agentic Coding Config</span>
+        <div class="skill-group">
+          <div class="skill-cat">AI & LLM</div>
+          <div class="skill-list">
+            <span class="sk strong">AI Agents</span>
+            <span class="sk strong">MCP</span>
+            <span class="sk strong">Prompt Eng.</span>
+            <span class="sk">OpenAI API</span>
+            <span class="sk">Anthropic API</span>
+            <span class="sk">Tool Use</span>
+            <span class="sk">Sub-agents</span>
+            <span class="sk">Hugging Face</span>
+            <span class="sk">Ollama</span>
+            <span class="sk">LLM Eval</span>
+            <span class="sk">Agentic Coding Config</span>
+          </div>
         </div>
 
-        <div class="skill-cat">Data Science</div>
-        <div class="skill-list">
-          <span class="sk strong">Python</span>
-          <span class="sk strong">SQL</span>
-          <span class="sk strong">NLP</span>
-          <span class="sk strong">Sentiment Analysis</span>
-          <span class="sk">Pandas</span>
-          <span class="sk">Time Series</span>
-          <span class="sk">Computer Vision</span>
+        <div class="skill-group">
+          <div class="skill-cat">Data Science</div>
+          <div class="skill-list">
+            <span class="sk strong">Python</span>
+            <span class="sk strong">SQL</span>
+            <span class="sk strong">NLP</span>
+            <span class="sk strong">Sentiment Analysis</span>
+            <span class="sk">Pandas</span>
+            <span class="sk">Time Series</span>
+            <span class="sk">Computer Vision</span>
+          </div>
         </div>
 
-        <div class="skill-cat" style="break-before:page;">Business Intelligence</div>
-        <div class="skill-list">
-          <span class="sk">Power BI</span>
-          <span class="sk">QuickSight</span>
-          <span class="sk">Tableau</span>
-          <span class="sk">Looker Studio</span>
+        <div class="skill-group">
+          <div class="skill-cat">Business Intelligence</div>
+          <div class="skill-list">
+            <span class="sk">Power BI</span>
+            <span class="sk">QuickSight</span>
+            <span class="sk">Tableau</span>
+            <span class="sk">Looker Studio</span>
+          </div>
         </div>
 
-        <div class="skill-cat">MLOps & Cloud</div>
-        <div class="skill-list">
-          <span class="sk">Docker</span>
-          <span class="sk">FastAPI</span>
-          <span class="sk">AWS S3</span>
-          <span class="sk">Athena</span>
-          <span class="sk">Flask</span>
-          <span class="sk">GitHub</span>
+        <div class="skill-group">
+          <div class="skill-cat">MLOps & Cloud</div>
+          <div class="skill-list">
+            <span class="sk">Docker</span>
+            <span class="sk">FastAPI</span>
+            <span class="sk">AWS S3</span>
+            <span class="sk">Athena</span>
+            <span class="sk">Flask</span>
+            <span class="sk">GitHub</span>
+          </div>
         </div>
       </section>
 

@@ -343,7 +343,7 @@
     font-weight: 400;
   }
 
-  .skill-cat:first-child { margin-top: 0; }
+  .skill-group:first-child .skill-cat { margin-top: 0; }
 
   .skill-list {
     display: flex;
@@ -575,7 +575,8 @@
     .intro-text { font-size: 15px; line-height: 1.45; padding-left: 12px; }
     section { margin-bottom: 10px; }
     .sec-title { margin-bottom: 6px; font-size: 11.5px; }
-    .exp-item { margin-bottom: 8px; padding-bottom: 8px; }
+    .exp-item { margin-bottom: 8px; padding-bottom: 8px; break-inside: avoid; }
+    .skill-group { break-inside: avoid; }
     .exp-role { font-size: 15px; }
     .exp-company { font-size: 12px; margin-bottom: 4px; }
     .exp-desc { font-size: 13.5px; line-height: 1.45; margin-bottom: 5px; }
@@ -784,7 +785,7 @@
 
       <section>
         <div class="sec-title">Progetti Personali & Open Source</div>
-        <div class="exp-company" style="margin-bottom:8px;"><a href="https://github.com/AndreaBonn" target="_blank" style="color:var(--blue);text-decoration:none;">github.com/AndreaBonn</a> · 12 repository pubblici</div>
+        <div class="exp-company" style="margin-bottom:8px;"><a href="https://github.com/AndreaBonn" target="_blank" style="color:var(--blue);text-decoration:none;">github.com/AndreaBonn</a> · 13 repository pubblici</div>
 
         <div class="exp-item">
           <div class="exp-meta">
@@ -831,16 +832,18 @@
             <div class="exp-period">In corso</div>
           </div>
           <div class="exp-desc screen-only">
-            Strumenti per ottimizzare il workflow quotidiano su sistemi Unix: <a href="https://github.com/AndreaBonn/nautilus-extensions" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">estensioni per file manager Linux</a>, <a href="https://github.com/AndreaBonn/cli-image-paste" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">utility CLI per gestione immagini da clipboard</a> e <a href="https://github.com/AndreaBonn/audio-filename-fixer" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">rinomina automatica file audio via fingerprinting AcoustID</a>.
+            Strumenti per ottimizzare il workflow quotidiano: <a href="https://github.com/AndreaBonn/nautilus-extensions" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">estensioni per file manager Linux</a>, <a href="https://github.com/AndreaBonn/cli-image-paste" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">utility CLI per gestione immagini da clipboard</a>, <a href="https://github.com/AndreaBonn/audio-filename-fixer" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">rinomina automatica file audio via fingerprinting AcoustID</a> e <a href="https://github.com/AndreaBonn/dipendenti-in-cloud-notifier" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">notifiche smart per timbratura aziendale</a> come estensione Chrome con Web Audio API.
           </div>
           <div class="exp-desc print-only">
-            <a href="https://github.com/AndreaBonn/nautilus-extensions" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">Estensioni file manager</a>, <a href="https://github.com/AndreaBonn/cli-image-paste" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">utility CLI per immagini</a> e <a href="https://github.com/AndreaBonn/audio-filename-fixer" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">rinomina audio via AcoustID</a> per workflow Unix.
+            <a href="https://github.com/AndreaBonn/nautilus-extensions" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">Estensioni file manager</a>, <a href="https://github.com/AndreaBonn/cli-image-paste" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">utility CLI per immagini</a>, <a href="https://github.com/AndreaBonn/audio-filename-fixer" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">rinomina audio via AcoustID</a> e <a href="https://github.com/AndreaBonn/dipendenti-in-cloud-notifier" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">notifiche timbratura</a> per workflow quotidiano.
           </div>
           <div class="exp-tags">
             <span class="tag tag-blue">Python</span>
+            <span class="tag tag-blue">JavaScript</span>
             <span class="tag tag-plain">Shell</span>
             <span class="tag tag-plain">Linux</span>
             <span class="tag tag-plain">CLI</span>
+            <span class="tag tag-plain">Chrome Extension</span>
             <span class="tag tag-plain">AcoustID</span>
           </div>
         </div>
@@ -885,7 +888,7 @@
             <div class="kpi-label">anni di esperienza professionale</div>
           </div>
           <div class="kpi" style="flex:1;">
-            <div class="kpi-num">12+</div>
+            <div class="kpi-num">13+</div>
             <div class="kpi-label">progetti open source</div>
           </div>
         </div>
@@ -914,48 +917,56 @@
       <section>
         <div class="sec-title">Competenze</div>
 
-        <div class="skill-cat">AI & LLM</div>
-        <div class="skill-list">
-          <span class="sk strong">Agenti AI</span>
-          <span class="sk strong">MCP</span>
-          <span class="sk strong">Prompt Eng.</span>
-          <span class="sk">OpenAI API</span>
-          <span class="sk">Anthropic API</span>
-          <span class="sk">Tool Use</span>
-          <span class="sk">Sub-agents</span>
-          <span class="sk">Hugging Face</span>
-          <span class="sk">Ollama</span>
-          <span class="sk">LLM Eval</span>
-          <span class="sk">Agentic Coding Config</span>
+        <div class="skill-group">
+          <div class="skill-cat">AI & LLM</div>
+          <div class="skill-list">
+            <span class="sk strong">Agenti AI</span>
+            <span class="sk strong">MCP</span>
+            <span class="sk strong">Prompt Eng.</span>
+            <span class="sk">OpenAI API</span>
+            <span class="sk">Anthropic API</span>
+            <span class="sk">Tool Use</span>
+            <span class="sk">Sub-agents</span>
+            <span class="sk">Hugging Face</span>
+            <span class="sk">Ollama</span>
+            <span class="sk">LLM Eval</span>
+            <span class="sk">Agentic Coding Config</span>
+          </div>
         </div>
 
-        <div class="skill-cat">Data Science</div>
-        <div class="skill-list">
-          <span class="sk strong">Python</span>
-          <span class="sk strong">SQL</span>
-          <span class="sk strong">NLP</span>
-          <span class="sk strong">Sentiment Analysis</span>
-          <span class="sk">Pandas</span>
-          <span class="sk">Time Series</span>
-          <span class="sk">Computer Vision</span>
+        <div class="skill-group">
+          <div class="skill-cat">Data Science</div>
+          <div class="skill-list">
+            <span class="sk strong">Python</span>
+            <span class="sk strong">SQL</span>
+            <span class="sk strong">NLP</span>
+            <span class="sk strong">Sentiment Analysis</span>
+            <span class="sk">Pandas</span>
+            <span class="sk">Time Series</span>
+            <span class="sk">Computer Vision</span>
+          </div>
         </div>
 
-        <div class="skill-cat">Business Intelligence</div>
-        <div class="skill-list">
-          <span class="sk">Power BI</span>
-          <span class="sk">QuickSight</span>
-          <span class="sk">Tableau</span>
-          <span class="sk">Looker Studio</span>
+        <div class="skill-group">
+          <div class="skill-cat">Business Intelligence</div>
+          <div class="skill-list">
+            <span class="sk">Power BI</span>
+            <span class="sk">QuickSight</span>
+            <span class="sk">Tableau</span>
+            <span class="sk">Looker Studio</span>
+          </div>
         </div>
 
-        <div class="skill-cat">MLOps & Cloud</div>
-        <div class="skill-list">
-          <span class="sk">Docker</span>
-          <span class="sk">FastAPI</span>
-          <span class="sk">AWS S3</span>
-          <span class="sk">Athena</span>
-          <span class="sk">Flask</span>
-          <span class="sk">GitHub</span>
+        <div class="skill-group">
+          <div class="skill-cat">MLOps & Cloud</div>
+          <div class="skill-list">
+            <span class="sk">Docker</span>
+            <span class="sk">FastAPI</span>
+            <span class="sk">AWS S3</span>
+            <span class="sk">Athena</span>
+            <span class="sk">Flask</span>
+            <span class="sk">GitHub</span>
+          </div>
         </div>
       </section>
 

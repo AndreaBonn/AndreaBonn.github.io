@@ -1,0 +1,27 @@
+{
+  "name": "Andrea Bonacci CV",
+  "short_name": "AB CV",
+  "description": "Curriculum Vitae di Andrea Bonacci — Data Analyst & AI Engineer",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf9f7",
+  "theme_color": "#1d4e89",
+  "icons": [
+    {
+      "src": "assets/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

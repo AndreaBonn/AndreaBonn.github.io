@@ -13,3 +13,8 @@
 !LICENSE
 !assets/
 !assets/preview.png
+!assets/foto-profilo-crop.jpg
+!assets/icons/
+!assets/icons/*
+!manifest.json
+!service-worker.js

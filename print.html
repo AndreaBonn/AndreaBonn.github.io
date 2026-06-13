@@ -41,7 +41,7 @@
   }
 
   @page {
-    margin: 12mm 0;
+    margin: 9mm 0;
   }
 
   .page {
@@ -162,7 +162,7 @@
     background: var(--gold);
   }
 
-  section { margin-bottom: 18px; }
+  section { margin-bottom: 11px; }
 
   .intro-text {
     font-family: 'Cormorant Garamond', serif;
@@ -576,7 +576,7 @@
                 <div class="exp-period">Ott 2025 → presente</div>
               </div>
               <div class="exp-desc">
-                Focus AI Engineering: agenti AI e workflow agentici con MCP, tool use, sub-agents e integrazione LLM (OpenAI, Anthropic). Sistemi AI in produzione su commessa, tra cui un simulatore di roleplay vocale in tempo reale (real-time voice, RAG, valutazione automatica multilingua). Claude Code, Windsurf e Gemini CLI in produzione. Tutor accademico per tirocinanti universitari. Colloqui tecnici per hiring Data Scientist e AI Engineer post-acquisizione.
+                Focus AI Engineering: agenti AI e workflow agentici con MCP, tool use, sub-agents e integrazione LLM (OpenAI, Anthropic). Sistemi AI in produzione su commessa, tra cui roleplay vocale in tempo reale (real-time voice, RAG, valutazione automatica multilingua) e agenti AI per l'automazione documentale e contabile (function calling, document AI). Claude Code, Windsurf e Gemini CLI in produzione. Tutor accademico per tirocinanti universitari. Colloqui tecnici per hiring Data Scientist e AI Engineer post-acquisizione.
               </div>
               <div class="exp-tags">
                 <span class="tag tag-green">Agenti AI</span>
@@ -584,6 +584,7 @@
                 <span class="tag tag-green">LLM Integration</span>
                 <span class="tag tag-green">Realtime Voice AI</span>
                 <span class="tag tag-green">RAG</span>
+                <span class="tag tag-green">Document AI</span>
                 <span class="tag tag-blue">Claude Code</span>
                 <span class="tag tag-gold">Tutor Accademico</span>
                 <span class="tag tag-gold">Technical Hiring</span>
@@ -656,10 +657,10 @@
 
         <div class="exp-item">
           <div class="exp-meta">
-            <div class="exp-role">Simulatore di Roleplay Vocale AI — Piattaforma E-learning Enterprise</div>
+            <div class="exp-role">Sistemi di Voice AI Conversazionale in Tempo Reale</div>
           </div>
           <div class="exp-desc">
-            Sviluppo end-to-end del modulo di roleplay conversazionale per una piattaforma SaaS di formazione aziendale: simulazioni vocali in tempo reale con interlocutori AI e valutazione automatica della performance. Dialogo voce-a-voce a bassa latenza (OpenAI Realtime API, Gemini Live) con trascrizione streaming (AssemblyAI Universal-3). Architettura multi-provider con fallback e circuit breaker. Knowledge base RAG (embeddings + pgvector) interrogata via function calling. Report di valutazione automatici con scoring per criterio, streaming via WebSocket e validazione anti-allucinazione. Prompt engineering multilingua. Capacità AI (LLM, RAG, voce real-time) integrate in uno stack di produzione esistente Ruby on Rails + Vue, non orientato al machine learning.
+            Progettazione e sviluppo di sistemi di conversazione vocale AI in tempo reale, con valutazione automatica delle interazioni. Lavoro con provider di voice AI in tempo reale (OpenAI Realtime API, Gemini Live) e trascrizione in streaming (AssemblyAI), architetture multi-provider con fallback e circuit breaker, knowledge base RAG (embeddings e ricerca vettoriale) via function calling, valutazione automatica con validazione anti-allucinazione e prompt engineering multilingua. Competenze integrabili in stack di produzione eterogenei.
           </div>
           <div class="exp-tags">
             <span class="tag tag-green">Realtime Voice AI</span>
@@ -671,9 +672,31 @@
             <span class="tag tag-blue">pgvector</span>
             <span class="tag tag-blue">AWS Bedrock</span>
             <span class="tag tag-blue">WebSocket</span>
-            <span class="tag tag-plain">Ruby on Rails</span>
-            <span class="tag tag-plain">Vue 3</span>
             <span class="tag tag-plain">Circuit Breaker</span>
+            <span class="tag tag-plain">Cross-stack Integration</span>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-meta">
+            <div class="exp-role">Agenti AI per Document & Finance Automation</div>
+          </div>
+          <div class="exp-desc">
+            Progettazione e sviluppo di agenti AI per l'automazione di processi documentali e contabili (es. riconciliazione automatica di documenti correlati). Agenti LLM con function calling nativo e output strutturato validato (Pydantic), prompt engineering avanzato; document AI per estrarre dati strutturati da documenti eterogenei (XML, PDF, file firmati) via parsing e information extraction; matching deterministico con regole, tolleranze e confidence scoring; integrazione con sistemi gestionali ed ERP; flussi human-in-the-loop.
+          </div>
+          <div class="exp-tags">
+            <span class="tag tag-green">AI Agent</span>
+            <span class="tag tag-green">OpenAI Function Calling</span>
+            <span class="tag tag-green">Prompt Engineering</span>
+            <span class="tag tag-green">Document AI</span>
+            <span class="tag tag-green">Information Extraction</span>
+            <span class="tag tag-green">Fuzzy Matching</span>
+            <span class="tag tag-blue">lxml</span>
+            <span class="tag tag-blue">pdfplumber</span>
+            <span class="tag tag-blue">ERP Integration</span>
+            <span class="tag tag-plain">Python</span>
+            <span class="tag tag-plain">Flask</span>
+            <span class="tag tag-plain">Pydantic</span>
           </div>
         </div>
       </section>
@@ -834,6 +857,7 @@
             <span class="sk">Anthropic API</span>
             <span class="sk">Tool Use</span>
             <span class="sk">Function Calling</span>
+            <span class="sk">Document AI</span>
             <span class="sk">Realtime Voice</span>
             <span class="sk">Sub-agents</span>
             <span class="sk">Hugging Face</span>

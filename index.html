@@ -706,16 +706,17 @@
                 <div class="exp-period">Ott 2025 → presente</div>
               </div>
               <div class="exp-desc screen-only">
-                Focus su AI Engineering: sviluppo di agenti AI e workflow agentici con MCP, tool use, sub-agents, skills e rules. Integrazione LLM via API OpenAI e Anthropic. Uso avanzato di Claude Code, Windsurf e Gemini CLI in produzione. Tutor accademico aziendale: supervisione dei tirocinanti universitari, definizione dei percorsi formativi e valutazione finale. Conduzione dei colloqui tecnici per l'assunzione di Data Scientist e AI Engineer nella fase di espansione dell'organico post-acquisizione.
+                Focus su AI Engineering: sviluppo di agenti AI e workflow agentici con MCP, tool use, sub-agents, skills e rules. Integrazione LLM via API OpenAI e Anthropic. Sviluppo end-to-end di sistemi AI in produzione su commessa, tra cui un simulatore di roleplay vocale in tempo reale per una piattaforma di formazione enterprise (dialogo voce-a-voce, RAG e valutazione automatica multilingua). Uso avanzato di Claude Code, Windsurf e Gemini CLI in produzione. Tutor accademico aziendale: supervisione dei tirocinanti universitari, definizione dei percorsi formativi e valutazione finale. Conduzione dei colloqui tecnici per l'assunzione di Data Scientist e AI Engineer nella fase di espansione dell'organico post-acquisizione.
               </div>
               <div class="exp-desc print-only">
-                Focus AI Engineering: agenti AI e workflow agentici con MCP, tool use, sub-agents e integrazione LLM (OpenAI, Anthropic). Claude Code, Windsurf e Gemini CLI in produzione. Tutor accademico per tirocinanti universitari. Colloqui tecnici per hiring Data Scientist e AI Engineer post-acquisizione.
+                Focus AI Engineering: agenti AI e workflow agentici con MCP, tool use, sub-agents e integrazione LLM (OpenAI, Anthropic). Sistemi AI in produzione su commessa, tra cui un simulatore di roleplay vocale in tempo reale (real-time voice, RAG, valutazione automatica multilingua). Claude Code, Windsurf e Gemini CLI in produzione. Tutor accademico per tirocinanti universitari. Colloqui tecnici per hiring Data Scientist e AI Engineer post-acquisizione.
               </div>
               <div class="exp-tags">
                 <span class="tag tag-green">Agenti AI</span>
                 <span class="tag tag-green">MCP</span>
                 <span class="tag tag-green">LLM Integration</span>
-                <span class="tag tag-green">Tool Use</span>
+                <span class="tag tag-green">Realtime Voice AI</span>
+                <span class="tag tag-green">RAG</span>
                 <span class="tag tag-blue">Claude Code</span>
                 <span class="tag tag-gold">Tutor Accademico</span>
                 <span class="tag tag-gold">Technical Hiring</span>
@@ -786,6 +787,37 @@
           </div>
         </div>
 
+      </section>
+
+      <section>
+        <div class="sec-title">Progetti Lavorativi</div>
+        <div class="exp-company" style="margin-bottom:8px;">Su commessa per cliente enterprise · dettagli anonimizzati per riservatezza</div>
+
+        <div class="exp-item">
+          <div class="exp-meta">
+            <div class="exp-role">Simulatore di Roleplay Vocale AI — Piattaforma E-learning Enterprise</div>
+          </div>
+          <div class="exp-desc screen-only">
+            Sviluppo end-to-end del modulo di roleplay conversazionale per una piattaforma SaaS di formazione aziendale: simulazioni vocali in tempo reale con interlocutori AI per allenare competenze relazionali (vendita, negoziazione, gestione del cliente), con valutazione automatica della performance. Dialogo voce-a-voce a bassa latenza basato su OpenAI Realtime API e Google Gemini Live, con trascrizione in streaming (AssemblyAI Universal-3) e language biasing per evitare il drift linguistico. Architettura multi-provider con fallback automatico e circuit breaker per la continuità del servizio in produzione. Knowledge base in RAG (chunking, embeddings e ricerca semantica su pgvector) che l'avatar AI interroga tramite function calling. Report di valutazione generati automaticamente con scoring per criterio, risultati trasmessi token-by-token via WebSocket e validazione anti-allucinazione delle citazioni a supporto del punteggio. Prompt engineering multilingua su sei lingue. L'intera capacità AI (LLM, RAG, voce in tempo reale) è stata integrata in uno stack di produzione esistente in Ruby on Rails e Vue, non orientato al machine learning: portare l'AI generativa dentro qualsiasi codebase, non solo nei notebook Python.
+          </div>
+          <div class="exp-desc print-only">
+            Sviluppo end-to-end del modulo di roleplay conversazionale per una piattaforma SaaS di formazione aziendale: simulazioni vocali in tempo reale con interlocutori AI e valutazione automatica della performance. Dialogo voce-a-voce a bassa latenza (OpenAI Realtime API, Gemini Live) con trascrizione streaming (AssemblyAI Universal-3). Architettura multi-provider con fallback e circuit breaker. Knowledge base RAG (embeddings + pgvector) interrogata via function calling. Report di valutazione automatici con scoring per criterio, streaming via WebSocket e validazione anti-allucinazione. Prompt engineering multilingua. Capacità AI (LLM, RAG, voce real-time) integrate in uno stack di produzione esistente Ruby on Rails + Vue, non orientato al machine learning.
+          </div>
+          <div class="exp-tags">
+            <span class="tag tag-green">Realtime Voice AI</span>
+            <span class="tag tag-green">OpenAI Realtime API</span>
+            <span class="tag tag-green">Gemini Live</span>
+            <span class="tag tag-green">AssemblyAI</span>
+            <span class="tag tag-green">RAG</span>
+            <span class="tag tag-green">Function Calling</span>
+            <span class="tag tag-blue">pgvector</span>
+            <span class="tag tag-blue">AWS Bedrock</span>
+            <span class="tag tag-blue">WebSocket</span>
+            <span class="tag tag-plain">Ruby on Rails</span>
+            <span class="tag tag-plain">Vue 3</span>
+            <span class="tag tag-plain">Circuit Breaker</span>
+          </div>
+        </div>
       </section>
 
       <section>
@@ -955,9 +987,12 @@
             <span class="sk strong">Agenti AI</span>
             <span class="sk strong">MCP</span>
             <span class="sk strong">Prompt Eng.</span>
+            <span class="sk strong">RAG</span>
             <span class="sk">OpenAI API</span>
             <span class="sk">Anthropic API</span>
             <span class="sk">Tool Use</span>
+            <span class="sk">Function Calling</span>
+            <span class="sk">Realtime Voice</span>
             <span class="sk">Sub-agents</span>
             <span class="sk">Hugging Face</span>
             <span class="sk">Ollama</span>
@@ -996,6 +1031,8 @@
             <span class="sk">FastAPI</span>
             <span class="sk">AWS S3</span>
             <span class="sk">Athena</span>
+            <span class="sk">AWS Bedrock</span>
+            <span class="sk">pgvector</span>
             <span class="sk">Flask</span>
             <span class="sk">GitHub</span>
           </div>

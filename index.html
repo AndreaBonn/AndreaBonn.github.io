@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Andrea Bonacci — Data Analyst & AI Engineer</title>
+<title>Andrea Bonacci — AI Engineer & Data Analyst</title>
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#1d4e89">
 <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
@@ -271,6 +271,41 @@
     font-weight: 300;
     margin-bottom: 12px;
   }
+
+  .exp-lead {
+    color: var(--ink-mid);
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+
+  .exp-bullets {
+    list-style: none;
+    margin: 0 0 12px 0;
+    padding: 0;
+  }
+
+  .exp-bullets li {
+    position: relative;
+    padding-left: 17px;
+    margin-bottom: 5px;
+    color: var(--ink-mid);
+    font-size: 14.5px;
+    line-height: 1.55;
+    font-weight: 300;
+  }
+
+  .exp-bullets li::before {
+    content: '\25B8';
+    position: absolute;
+    left: 0;
+    top: 1px;
+    color: var(--gold);
+    font-size: 11px;
+  }
+
+  .exp-bullets li:last-child { margin-bottom: 0; }
 
   .exp-tags {
     display: flex;
@@ -585,6 +620,9 @@
     .exp-role { font-size: 15px; }
     .exp-company { font-size: 12px; margin-bottom: 4px; }
     .exp-desc { font-size: 13.5px; line-height: 1.45; margin-bottom: 5px; }
+    .exp-lead { font-size: 13.5px; line-height: 1.4; margin-bottom: 4px; }
+    .exp-bullets { margin-bottom: 5px; }
+    .exp-bullets li { font-size: 13px; line-height: 1.4; margin-bottom: 2px; padding-left: 13px; }
     .exp-period { font-size: 11px; }
     .tag { font-size: 11px; padding: 2px 6px; }
     .exp-tags { gap: 3px; }
@@ -637,9 +675,9 @@
     <div class="name-block">
       <h1>Andrea <em>Bonacci</em></h1>
       <div class="subtitle">
-        Data Analyst
-        <span class="subtitle-sep"></span>
         AI Engineer
+        <span class="subtitle-sep"></span>
+        LLM & Agentic Systems
       </div>
     </div>
     <div class="contact-block">
@@ -681,10 +719,10 @@
       <section>
         <div class="sec-title">Profilo</div>
         <p class="intro-text screen-only">
-          Data Analyst e AI Engineer con <strong>oltre <span id="exp-years-text">4</span> anni di esperienza</strong> in consulenza data-driven per clienti enterprise. Progetto pipeline di analisi end-to-end, dashboard BI e modelli NLP — dall'ETL al deploy in produzione con FastAPI e Docker. Oggi il mio focus è sull'<strong>AI Engineering</strong>: sviluppo agenti AI e workflow agentici con MCP, tool use e integrazione LLM, portando l'AI generativa dal prototipo al valore di business. <strong>Tutor accademico aziendale</strong> per i tirocinanti universitari e responsabile dei <strong>colloqui tecnici</strong> per l'assunzione di Data Scientist e AI Engineer nella fase di crescita post-acquisizione. Background in Data Science ed Economia Aziendale, ho anche tenuto un <strong>corso universitario</strong> intensivo di 8 ore su AI applicata al coding.
+          Da Data Scientist a <strong>AI Engineer</strong>, con <strong>oltre <span id="exp-years-text">4</span> anni di esperienza</strong> in consulenza data-driven per clienti enterprise. Oggi progetto e porto in produzione sistemi AI: agenti e workflow agentici con MCP e tool use, integrazione LLM (OpenAI, Anthropic), RAG e voice AI in tempo reale, portando l'AI generativa dal prototipo al valore di business. Background solido in data analysis end-to-end: pipeline, dashboard BI e modelli NLP, dall'ETL al deploy con FastAPI e Docker. <strong>Tutor accademico aziendale</strong> per i tirocinanti universitari e responsabile dei <strong>colloqui tecnici</strong> per l'assunzione di Data Scientist e AI Engineer nella fase di crescita post-acquisizione. Background in Data Science ed Economia Aziendale, ho anche tenuto un <strong>corso universitario</strong> intensivo di 8 ore su AI applicata al coding.
         </p>
         <p class="intro-text print-only">
-          Data Analyst e AI Engineer con <strong>oltre <span>4</span> anni di esperienza</strong> in consulenza data-driven per clienti enterprise. Pipeline di analisi end-to-end, dashboard BI e modelli NLP. Focus attuale sull'<strong>AI Engineering</strong>: agenti AI, workflow agentici con MCP e integrazione LLM in produzione. <strong>Tutor accademico</strong> per tirocinanti e responsabile <strong>colloqui tecnici</strong> di hiring post-acquisizione. Ho anche tenuto un <strong>corso universitario</strong> intensivo di 8 ore su AI applicata al coding.
+          Da Data Scientist a <strong>AI Engineer</strong>, con <strong>oltre <span>4</span> anni di esperienza</strong> in consulenza data-driven per clienti enterprise. Progetto e porto in produzione sistemi AI: agenti e workflow agentici con MCP e tool use, integrazione LLM (OpenAI, Anthropic), RAG e voice AI in tempo reale. Background in data analysis end-to-end: pipeline, dashboard BI e modelli NLP. <strong>Tutor accademico</strong> per tirocinanti e responsabile <strong>colloqui tecnici</strong> di hiring post-acquisizione. Ho anche tenuto un <strong>corso universitario</strong> intensivo di 8 ore su AI applicata al coding.
         </p>
       </section>
 
@@ -702,7 +740,7 @@
 
             <div class="exp-sub-item">
               <div class="exp-meta">
-                <div class="exp-role">Data Analyst & AI Engineer</div>
+                <div class="exp-role">AI Engineer & Data Analyst</div>
                 <div class="exp-period">Ott 2025 → presente</div>
               </div>
               <div class="exp-desc screen-only">
@@ -798,24 +836,22 @@
           <div class="exp-meta">
             <div class="exp-role">Sistemi di Voice AI Conversazionale in Tempo Reale</div>
           </div>
-          <div class="exp-desc screen-only">
-            Progettazione e sviluppo di sistemi di conversazione vocale AI in tempo reale: dialogo voce-a-voce a bassa latenza tra utente e interlocutore AI, con valutazione automatica delle interazioni. Lavoro con i principali provider di voice AI in tempo reale (OpenAI Realtime API, Google Gemini Live) e di trascrizione vocale in streaming (AssemblyAI), progetto architetture multi-provider con fallback e circuit breaker per la resilienza in produzione, costruisco knowledge base in RAG (embeddings e ricerca semantica vettoriale) interrogabili dall'AI via function calling, e implemento valutazione automatica con validazione anti-allucinazione e prompt engineering multilingua. Competenze che so calare in stack di produzione eterogenei, anche non orientati al machine learning.
+          <div class="exp-lead">
+            Sistemi di conversazione vocale AI a bassa latenza, voce-a-voce, con valutazione automatica delle interazioni.
           </div>
-          <div class="exp-desc print-only">
-            Progettazione e sviluppo di sistemi di conversazione vocale AI in tempo reale, con valutazione automatica delle interazioni. Lavoro con provider di voice AI in tempo reale (OpenAI Realtime API, Gemini Live) e trascrizione in streaming (AssemblyAI), architetture multi-provider con fallback e circuit breaker, knowledge base RAG (embeddings e ricerca vettoriale) via function calling, valutazione automatica con validazione anti-allucinazione e prompt engineering multilingua. Competenze integrabili in stack di produzione eterogenei.
-          </div>
+          <ul class="exp-bullets">
+            <li>Integrazione dei principali provider voice AI realtime (OpenAI Realtime API, Gemini Live) e di trascrizione in streaming (AssemblyAI).</li>
+            <li>Architetture multi-provider con fallback e circuit breaker per la resilienza in produzione.</li>
+            <li>Knowledge base RAG (embeddings, ricerca vettoriale) interrogabile dall'AI via function calling.</li>
+            <li>Valutazione automatica con validazione anti-allucinazione e prompt engineering multilingua, integrabile in stack di produzione eterogenei.</li>
+          </ul>
           <div class="exp-tags">
             <span class="tag tag-green">Realtime Voice AI</span>
             <span class="tag tag-green">OpenAI Realtime API</span>
-            <span class="tag tag-green">Gemini Live</span>
-            <span class="tag tag-green">AssemblyAI</span>
             <span class="tag tag-green">RAG</span>
             <span class="tag tag-green">Function Calling</span>
-            <span class="tag tag-blue">pgvector</span>
-            <span class="tag tag-blue">AWS Bedrock</span>
-            <span class="tag tag-blue">WebSocket</span>
             <span class="tag tag-plain">Circuit Breaker</span>
-            <span class="tag tag-plain">Cross-stack Integration</span>
+            <span class="tag tag-blue">pgvector</span>
           </div>
         </div>
 
@@ -823,25 +859,22 @@
           <div class="exp-meta">
             <div class="exp-role">Agenti AI per Document & Finance Automation</div>
           </div>
-          <div class="exp-desc screen-only">
-            Progettazione e sviluppo di agenti AI per l'automazione di processi documentali e contabili, come la riconciliazione automatica di documenti correlati. Costruisco agenti basati su LLM con function calling nativo e output strutturato validato (Pydantic), applicando prompt engineering avanzato (decision tree, esempi few-shot, gestione del costo asimmetrico degli errori). Realizzo pipeline di document AI per estrarre dati strutturati da documenti eterogenei (XML, PDF, file con firma digitale) tramite parsing e information extraction, motori di matching deterministico con regole, tolleranze e scoring di confidenza, e integrazione con sistemi gestionali ed ERP. Progetto inoltre flussi human-in-the-loop per la revisione dei casi dubbi.
+          <div class="exp-lead">
+            Agenti AI per l'automazione di processi documentali e contabili, come la riconciliazione automatica di documenti correlati.
           </div>
-          <div class="exp-desc print-only">
-            Progettazione e sviluppo di agenti AI per l'automazione di processi documentali e contabili (es. riconciliazione automatica di documenti correlati). Agenti LLM con function calling nativo e output strutturato validato (Pydantic), prompt engineering avanzato; document AI per estrarre dati strutturati da documenti eterogenei (XML, PDF, file firmati) via parsing e information extraction; matching deterministico con regole, tolleranze e confidence scoring; integrazione con sistemi gestionali ed ERP; flussi human-in-the-loop.
-          </div>
+          <ul class="exp-bullets">
+            <li>Agenti LLM con function calling nativo e output strutturato validato (Pydantic), con prompt engineering avanzato (decision tree, few-shot, costo asimmetrico degli errori).</li>
+            <li>Document AI per estrarre dati strutturati da documenti eterogenei (XML, PDF, file con firma digitale) via parsing e information extraction.</li>
+            <li>Motori di matching deterministico con regole, tolleranze e scoring di confidenza.</li>
+            <li>Integrazione con sistemi gestionali ed ERP e flussi human-in-the-loop per la revisione dei casi dubbi.</li>
+          </ul>
           <div class="exp-tags">
             <span class="tag tag-green">AI Agent</span>
-            <span class="tag tag-green">OpenAI Function Calling</span>
-            <span class="tag tag-green">Prompt Engineering</span>
+            <span class="tag tag-green">Function Calling</span>
             <span class="tag tag-green">Document AI</span>
             <span class="tag tag-green">Information Extraction</span>
             <span class="tag tag-green">Fuzzy Matching</span>
-            <span class="tag tag-blue">lxml</span>
-            <span class="tag tag-blue">pdfplumber</span>
             <span class="tag tag-blue">ERP Integration</span>
-            <span class="tag tag-plain">Python</span>
-            <span class="tag tag-plain">Flask</span>
-            <span class="tag tag-plain">Pydantic</span>
           </div>
         </div>
 
@@ -849,25 +882,22 @@
           <div class="exp-meta">
             <div class="exp-role">RAG e Document Intelligence per la Compliance</div>
           </div>
-          <div class="exp-desc screen-only">
-            Progettazione e sviluppo di sistemi AI che validano automaticamente la conformità di documenti (contratti, policy, playbook) rispetto a un corpus normativo, con citazione delle fonti e revisione umana. Costruisco pipeline RAG con ricerca ibrida (BM25 ed embeddings semantici) su corpus di documenti, con tokenizzazione e chunking specifici per dominio, e orchestrazione agentica multi-fase su LLM per l'analisi, la generazione di rilievi e i verdetti strutturati (conforme, non conforme, parzialmente conforme) con motivazioni e riferimenti normativi. Curo l'affidabilità con output strutturato validato, anti-allucinazione tramite retrolink obbligatorio alle fonti, e flussi human-in-the-loop con checkpoint, ripresa e audit trail per la revisione da parte di esperti. Backend FastAPI asincrono con aggiornamenti real-time via WebSocket e parsing di documenti eterogenei (PDF, DOCX).
+          <div class="exp-lead">
+            Sistemi AI che validano la conformità di documenti (contratti, policy, playbook) rispetto a un corpus normativo, con citazione delle fonti e revisione umana.
           </div>
-          <div class="exp-desc print-only">
-            Progettazione e sviluppo di sistemi AI per la validazione automatica di conformità documentale rispetto a un corpus normativo, con citazione delle fonti e revisione umana. Pipeline RAG con ricerca ibrida (BM25 + embeddings) e chunking per dominio, orchestrazione agentica multi-fase su LLM per rilievi e verdetti strutturati con riferimenti normativi, output validato e anti-allucinazione via retrolink obbligatorio alle fonti, flussi human-in-the-loop con checkpoint/ripresa e audit trail. Backend FastAPI asincrono con WebSocket e parsing documenti (PDF, DOCX).
-          </div>
+          <ul class="exp-bullets">
+            <li>Pipeline RAG con ricerca ibrida (BM25 ed embeddings semantici) e chunking specifico per dominio.</li>
+            <li>Orchestrazione agentica multi-fase su LLM per rilievi e verdetti strutturati (conforme, non conforme, parzialmente conforme) con riferimenti normativi.</li>
+            <li>Affidabilità con output validato e anti-allucinazione via retrolink obbligatorio alle fonti.</li>
+            <li>Flussi human-in-the-loop con checkpoint, ripresa e audit trail; backend FastAPI asincrono con aggiornamenti via WebSocket.</li>
+          </ul>
           <div class="exp-tags">
             <span class="tag tag-green">RAG</span>
             <span class="tag tag-green">Hybrid Search</span>
             <span class="tag tag-green">LLM Orchestration</span>
             <span class="tag tag-green">Structured Output</span>
             <span class="tag tag-green">Human-in-the-Loop</span>
-            <span class="tag tag-green">Document AI</span>
-            <span class="tag tag-blue">Haystack</span>
-            <span class="tag tag-blue">OpenAI Embeddings</span>
             <span class="tag tag-blue">FastAPI</span>
-            <span class="tag tag-blue">WebSocket</span>
-            <span class="tag tag-plain">Vector Store</span>
-            <span class="tag tag-plain">Async Python</span>
           </div>
         </div>
       </section>

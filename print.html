@@ -41,6 +41,7 @@
   }
 
   @page {
+    size: A4;
     margin: 8mm 0;
   }
 
@@ -98,7 +99,7 @@
     gap: 10px;
     font-size: 12px;
     font-weight: 500;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--ink-soft);
   }
@@ -145,7 +146,7 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: 11.5px;
     font-weight: 600;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
     color: var(--ink-soft);
     margin-bottom: 6px;
@@ -233,6 +234,41 @@
     margin-bottom: 5px;
   }
 
+  .exp-lead {
+    color: var(--ink-mid);
+    font-size: 13.5px;
+    line-height: 1.4;
+    font-weight: 400;
+    margin-bottom: 5px;
+  }
+
+  .exp-bullets {
+    list-style: none;
+    margin: 0 0 5px 0;
+    padding: 0;
+  }
+
+  .exp-bullets li {
+    position: relative;
+    padding-left: 13px;
+    margin-bottom: 3px;
+    color: var(--ink-mid);
+    font-size: 13px;
+    line-height: 1.4;
+    font-weight: 300;
+  }
+
+  .exp-bullets li::before {
+    content: '\25B8';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--gold);
+    font-size: 10px;
+  }
+
+  .exp-bullets li:last-child { margin-bottom: 0; }
+
   .exp-tags {
     display: flex;
     flex-wrap: wrap;
@@ -301,7 +337,7 @@
   .skill-cat {
     font-family: 'JetBrains Mono', monospace;
     font-size: 9.5px;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
     color: var(--gold);
     margin-bottom: 3px;
@@ -392,7 +428,7 @@
   .callout-label {
     font-family: 'JetBrains Mono', monospace;
     font-size: 9px;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
     color: var(--blue);
     margin-bottom: 4px;
@@ -514,9 +550,9 @@
     <div class="name-block">
       <h1>Andrea <em>Bonacci</em></h1>
       <div class="subtitle">
-        Data Analyst
-        <span class="subtitle-sep"></span>
         AI Engineer
+        <span class="subtitle-sep"></span>
+        LLM & Agentic Systems
       </div>
     </div>
     <div class="contact-block">
@@ -554,7 +590,7 @@
       <section>
         <div class="sec-title">Profilo</div>
         <p class="intro-text">
-          Data Analyst e AI Engineer con <strong>oltre <span id="exp-years-text">4</span> anni di esperienza</strong> in consulenza data-driven per clienti enterprise. Pipeline di analisi end-to-end, dashboard BI e modelli NLP — dall'ETL al deploy in produzione con FastAPI e Docker. Focus attuale sull'<strong>AI Engineering</strong>: agenti AI, workflow agentici con MCP, tool use e integrazione LLM in produzione. <strong>Tutor accademico</strong> per tirocinanti universitari e responsabile dei <strong>colloqui tecnici</strong> per l'assunzione di Data Scientist e AI Engineer. Ho anche tenuto un <strong>corso universitario</strong> intensivo di 8 ore su AI applicata al coding.
+          Da Data Scientist a <strong>AI Engineer</strong>, con <strong>oltre <span id="exp-years-text">4</span> anni di esperienza</strong> in consulenza data-driven per clienti enterprise. Progetto e porto in produzione sistemi AI: agenti e workflow agentici con MCP e tool use, integrazione LLM (OpenAI, Anthropic), RAG e voice AI in tempo reale. Background solido in data analysis end-to-end: pipeline, dashboard BI e modelli NLP, dall'ETL al deploy con FastAPI e Docker. <strong>Tutor accademico</strong> per tirocinanti universitari e responsabile dei <strong>colloqui tecnici</strong> di hiring post-acquisizione. Ho anche tenuto un <strong>corso universitario</strong> intensivo di 8 ore su AI applicata al coding.
         </p>
       </section>
 
@@ -572,7 +608,7 @@
 
             <div class="exp-sub-item">
               <div class="exp-meta">
-                <div class="exp-role">Data Analyst & AI Engineer</div>
+                <div class="exp-role">AI Engineer & Data Analyst</div>
                 <div class="exp-period">Ott 2025 → presente</div>
               </div>
               <div class="exp-desc">
@@ -659,21 +695,22 @@
           <div class="exp-meta">
             <div class="exp-role">Sistemi di Voice AI Conversazionale in Tempo Reale</div>
           </div>
-          <div class="exp-desc">
-            Progettazione e sviluppo di sistemi di conversazione vocale AI in tempo reale, con valutazione automatica delle interazioni. Lavoro con provider di voice AI in tempo reale (OpenAI Realtime API, Gemini Live) e trascrizione in streaming (AssemblyAI), architetture multi-provider con fallback e circuit breaker, knowledge base RAG (embeddings e ricerca vettoriale) via function calling, valutazione automatica con validazione anti-allucinazione e prompt engineering multilingua. Competenze integrabili in stack di produzione eterogenei.
+          <div class="exp-lead">
+            Sistemi di conversazione vocale AI a bassa latenza, voce-a-voce, con valutazione automatica delle interazioni.
           </div>
+          <ul class="exp-bullets">
+            <li>Integrazione dei principali provider voice AI realtime (OpenAI Realtime API, Gemini Live) e di trascrizione in streaming (AssemblyAI).</li>
+            <li>Architetture multi-provider con fallback e circuit breaker per la resilienza in produzione.</li>
+            <li>Knowledge base RAG (embeddings, ricerca vettoriale) interrogabile dall'AI via function calling.</li>
+            <li>Valutazione automatica con validazione anti-allucinazione e prompt engineering multilingua, integrabile in stack di produzione eterogenei.</li>
+          </ul>
           <div class="exp-tags">
             <span class="tag tag-green">Realtime Voice AI</span>
             <span class="tag tag-green">OpenAI Realtime API</span>
-            <span class="tag tag-green">Gemini Live</span>
-            <span class="tag tag-green">AssemblyAI</span>
             <span class="tag tag-green">RAG</span>
             <span class="tag tag-green">Function Calling</span>
-            <span class="tag tag-blue">pgvector</span>
-            <span class="tag tag-blue">AWS Bedrock</span>
-            <span class="tag tag-blue">WebSocket</span>
             <span class="tag tag-plain">Circuit Breaker</span>
-            <span class="tag tag-plain">Cross-stack Integration</span>
+            <span class="tag tag-blue">pgvector</span>
           </div>
         </div>
 
@@ -681,22 +718,22 @@
           <div class="exp-meta">
             <div class="exp-role">Agenti AI per Document & Finance Automation</div>
           </div>
-          <div class="exp-desc">
-            Progettazione e sviluppo di agenti AI per l'automazione di processi documentali e contabili (es. riconciliazione automatica di documenti correlati). Agenti LLM con function calling nativo e output strutturato validato (Pydantic), prompt engineering avanzato; document AI per estrarre dati strutturati da documenti eterogenei (XML, PDF, file firmati) via parsing e information extraction; matching deterministico con regole, tolleranze e confidence scoring; integrazione con sistemi gestionali ed ERP; flussi human-in-the-loop.
+          <div class="exp-lead">
+            Agenti AI per l'automazione di processi documentali e contabili, come la riconciliazione automatica di documenti correlati.
           </div>
+          <ul class="exp-bullets">
+            <li>Agenti LLM con function calling nativo e output strutturato validato (Pydantic), con prompt engineering avanzato.</li>
+            <li>Document AI per estrarre dati strutturati da documenti eterogenei (XML, PDF, file con firma digitale) via parsing e information extraction.</li>
+            <li>Motori di matching deterministico con regole, tolleranze e scoring di confidenza.</li>
+            <li>Integrazione con sistemi gestionali ed ERP e flussi human-in-the-loop per la revisione dei casi dubbi.</li>
+          </ul>
           <div class="exp-tags">
             <span class="tag tag-green">AI Agent</span>
-            <span class="tag tag-green">OpenAI Function Calling</span>
-            <span class="tag tag-green">Prompt Engineering</span>
+            <span class="tag tag-green">Function Calling</span>
             <span class="tag tag-green">Document AI</span>
             <span class="tag tag-green">Information Extraction</span>
             <span class="tag tag-green">Fuzzy Matching</span>
-            <span class="tag tag-blue">lxml</span>
-            <span class="tag tag-blue">pdfplumber</span>
             <span class="tag tag-blue">ERP Integration</span>
-            <span class="tag tag-plain">Python</span>
-            <span class="tag tag-plain">Flask</span>
-            <span class="tag tag-plain">Pydantic</span>
           </div>
         </div>
 
@@ -704,22 +741,22 @@
           <div class="exp-meta">
             <div class="exp-role">RAG e Document Intelligence per la Compliance</div>
           </div>
-          <div class="exp-desc">
-            Progettazione e sviluppo di sistemi AI per la validazione automatica di conformità documentale rispetto a un corpus normativo, con citazione delle fonti e revisione umana. Pipeline RAG con ricerca ibrida (BM25 + embeddings) e chunking per dominio, orchestrazione agentica multi-fase su LLM per rilievi e verdetti strutturati con riferimenti normativi, output validato e anti-allucinazione via retrolink obbligatorio alle fonti, flussi human-in-the-loop con checkpoint/ripresa e audit trail. Backend FastAPI asincrono con WebSocket e parsing documenti (PDF, DOCX).
+          <div class="exp-lead">
+            Sistemi AI che validano la conformità di documenti (contratti, policy, playbook) rispetto a un corpus normativo, con citazione delle fonti e revisione umana.
           </div>
+          <ul class="exp-bullets">
+            <li>Pipeline RAG con ricerca ibrida (BM25 ed embeddings semantici) e chunking specifico per dominio.</li>
+            <li>Orchestrazione agentica multi-fase su LLM per rilievi e verdetti strutturati con riferimenti normativi.</li>
+            <li>Affidabilità con output validato e anti-allucinazione via retrolink obbligatorio alle fonti.</li>
+            <li>Flussi human-in-the-loop con checkpoint, ripresa e audit trail; backend FastAPI asincrono con aggiornamenti via WebSocket.</li>
+          </ul>
           <div class="exp-tags">
             <span class="tag tag-green">RAG</span>
             <span class="tag tag-green">Hybrid Search</span>
             <span class="tag tag-green">LLM Orchestration</span>
             <span class="tag tag-green">Structured Output</span>
             <span class="tag tag-green">Human-in-the-Loop</span>
-            <span class="tag tag-green">Document AI</span>
-            <span class="tag tag-blue">Haystack</span>
-            <span class="tag tag-blue">OpenAI Embeddings</span>
             <span class="tag tag-blue">FastAPI</span>
-            <span class="tag tag-blue">WebSocket</span>
-            <span class="tag tag-plain">Vector Store</span>
-            <span class="tag tag-plain">Async Python</span>
           </div>
         </div>
       </section>

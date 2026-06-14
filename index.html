@@ -706,10 +706,10 @@
                 <div class="exp-period">Ott 2025 → presente</div>
               </div>
               <div class="exp-desc screen-only">
-                Focus su AI Engineering: sviluppo di agenti AI e workflow agentici con MCP, tool use, sub-agents, skills e rules. Integrazione LLM via API OpenAI e Anthropic. Sviluppo end-to-end di sistemi AI in produzione su commessa, tra cui sistemi di roleplay vocale in tempo reale (dialogo voce-a-voce, RAG e valutazione automatica multilingua) e agenti AI per l'automazione di processi documentali e contabili (function calling e document AI). Uso avanzato di Claude Code, Windsurf e Gemini CLI in produzione. Tutor accademico aziendale: supervisione dei tirocinanti universitari, definizione dei percorsi formativi e valutazione finale. Conduzione dei colloqui tecnici per l'assunzione di Data Scientist e AI Engineer nella fase di espansione dell'organico post-acquisizione.
+                Focus su AI Engineering: sviluppo di agenti AI e workflow agentici con MCP, tool use, sub-agents, skills e rules. Integrazione LLM via API OpenAI e Anthropic. Sviluppo end-to-end di sistemi AI in produzione su commessa, tra cui sistemi di voice AI conversazionale in tempo reale, agenti AI per l'automazione di processi documentali e contabili, e sistemi RAG per la validazione di conformità documentale su corpus normativi. Uso avanzato di Claude Code, Windsurf e Gemini CLI in produzione. Tutor accademico aziendale: supervisione dei tirocinanti universitari, definizione dei percorsi formativi e valutazione finale. Conduzione dei colloqui tecnici per l'assunzione di Data Scientist e AI Engineer nella fase di espansione dell'organico post-acquisizione.
               </div>
               <div class="exp-desc print-only">
-                Focus AI Engineering: agenti AI e workflow agentici con MCP, tool use, sub-agents e integrazione LLM (OpenAI, Anthropic). Sistemi AI in produzione su commessa, tra cui roleplay vocale in tempo reale (real-time voice, RAG, valutazione automatica multilingua) e agenti AI per l'automazione documentale e contabile (function calling, document AI). Claude Code, Windsurf e Gemini CLI in produzione. Tutor accademico per tirocinanti universitari. Colloqui tecnici per hiring Data Scientist e AI Engineer post-acquisizione.
+                Focus AI Engineering: agenti AI e workflow agentici con MCP, tool use, sub-agents e integrazione LLM (OpenAI, Anthropic). Sistemi AI in produzione su commessa, tra cui voice AI conversazionale in tempo reale, agenti per l'automazione documentale e contabile, e RAG per la validazione di conformità su corpus normativi. Claude Code, Windsurf e Gemini CLI in produzione. Tutor accademico per tirocinanti universitari. Colloqui tecnici per hiring Data Scientist e AI Engineer post-acquisizione.
               </div>
               <div class="exp-tags">
                 <span class="tag tag-green">Agenti AI</span>
@@ -842,6 +842,32 @@
             <span class="tag tag-plain">Python</span>
             <span class="tag tag-plain">Flask</span>
             <span class="tag tag-plain">Pydantic</span>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-meta">
+            <div class="exp-role">RAG e Document Intelligence per la Compliance</div>
+          </div>
+          <div class="exp-desc screen-only">
+            Progettazione e sviluppo di sistemi AI che validano automaticamente la conformità di documenti (contratti, policy, playbook) rispetto a un corpus normativo, con citazione delle fonti e revisione umana. Costruisco pipeline RAG con ricerca ibrida (BM25 ed embeddings semantici) su corpus di documenti, con tokenizzazione e chunking specifici per dominio, e orchestrazione agentica multi-fase su LLM per l'analisi, la generazione di rilievi e i verdetti strutturati (conforme, non conforme, parzialmente conforme) con motivazioni e riferimenti normativi. Curo l'affidabilità con output strutturato validato, anti-allucinazione tramite retrolink obbligatorio alle fonti, e flussi human-in-the-loop con checkpoint, ripresa e audit trail per la revisione da parte di esperti. Backend FastAPI asincrono con aggiornamenti real-time via WebSocket e parsing di documenti eterogenei (PDF, DOCX).
+          </div>
+          <div class="exp-desc print-only">
+            Progettazione e sviluppo di sistemi AI per la validazione automatica di conformità documentale rispetto a un corpus normativo, con citazione delle fonti e revisione umana. Pipeline RAG con ricerca ibrida (BM25 + embeddings) e chunking per dominio, orchestrazione agentica multi-fase su LLM per rilievi e verdetti strutturati con riferimenti normativi, output validato e anti-allucinazione via retrolink obbligatorio alle fonti, flussi human-in-the-loop con checkpoint/ripresa e audit trail. Backend FastAPI asincrono con WebSocket e parsing documenti (PDF, DOCX).
+          </div>
+          <div class="exp-tags">
+            <span class="tag tag-green">RAG</span>
+            <span class="tag tag-green">Hybrid Search</span>
+            <span class="tag tag-green">LLM Orchestration</span>
+            <span class="tag tag-green">Structured Output</span>
+            <span class="tag tag-green">Human-in-the-Loop</span>
+            <span class="tag tag-green">Document AI</span>
+            <span class="tag tag-blue">Haystack</span>
+            <span class="tag tag-blue">OpenAI Embeddings</span>
+            <span class="tag tag-blue">FastAPI</span>
+            <span class="tag tag-blue">WebSocket</span>
+            <span class="tag tag-plain">Vector Store</span>
+            <span class="tag tag-plain">Async Python</span>
           </div>
         </div>
       </section>
@@ -1019,6 +1045,7 @@
             <span class="sk">Tool Use</span>
             <span class="sk">Function Calling</span>
             <span class="sk">Document AI</span>
+            <span class="sk">Human-in-the-Loop</span>
             <span class="sk">Realtime Voice</span>
             <span class="sk">Sub-agents</span>
             <span class="sk">Hugging Face</span>

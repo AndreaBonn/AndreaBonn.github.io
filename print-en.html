@@ -36,12 +36,12 @@
     color: var(--ink);
     font-family: 'Jost', sans-serif;
     font-size: 14px;
-    line-height: 1.7;
+    line-height: 1.5;
     -webkit-font-smoothing: antialiased;
   }
 
   @page {
-    margin: 12mm 0;
+    margin: 8mm 0;
   }
 
   .page {
@@ -146,7 +146,7 @@
     background: var(--gold);
   }
 
-  section { margin-bottom: 18px; }
+  section { margin-bottom: 9px; }
 
   .intro-text {
     font-family: 'Cormorant Garamond', serif;
@@ -557,7 +557,7 @@
                 <div class="exp-period">Oct 2025 → present</div>
               </div>
               <div class="exp-desc">
-                AI Engineering focus: AI agents and agentic workflows with MCP, tool use, sub-agents and LLM integration (OpenAI, Anthropic). Production AI systems on client projects, including real-time voice roleplay systems (real-time voice, RAG, automatic multilingual evaluation) and AI agents for document and accounting automation (function calling, document AI). Claude Code, Windsurf and Gemini CLI in production. Academic tutor for university interns. Technical interviews for hiring Data Scientists and AI Engineers post-acquisition.
+                AI Engineering focus: AI agents and agentic workflows with MCP, tool use, sub-agents and LLM integration (OpenAI, Anthropic). Production AI systems on client projects, including real-time conversational voice AI, agents for document and accounting automation, and RAG for compliance validation against regulatory corpora. Claude Code, Windsurf and Gemini CLI in production. Academic tutor for university interns. Technical interviews for hiring Data Scientists and AI Engineers post-acquisition.
               </div>
               <div class="exp-tags">
                 <span class="tag tag-green">AI Agents</span>
@@ -678,6 +678,29 @@
             <span class="tag tag-plain">Python</span>
             <span class="tag tag-plain">Flask</span>
             <span class="tag tag-plain">Pydantic</span>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-meta">
+            <div class="exp-role">RAG & Document Intelligence for Compliance</div>
+          </div>
+          <div class="exp-desc">
+            Design and development of AI systems for automatic document compliance validation against a regulatory corpus, with source citation and human review. RAG pipelines with hybrid search (BM25 + embeddings) and domain-specific chunking, multi-phase agentic orchestration over LLMs for issues and structured verdicts with regulatory references, validated output and anti-hallucination via mandatory source back-links, human-in-the-loop flows with checkpoint/resume and audit trail. Asynchronous FastAPI backend with WebSocket and document parsing (PDF, DOCX).
+          </div>
+          <div class="exp-tags">
+            <span class="tag tag-green">RAG</span>
+            <span class="tag tag-green">Hybrid Search</span>
+            <span class="tag tag-green">LLM Orchestration</span>
+            <span class="tag tag-green">Structured Output</span>
+            <span class="tag tag-green">Human-in-the-Loop</span>
+            <span class="tag tag-green">Document AI</span>
+            <span class="tag tag-blue">Haystack</span>
+            <span class="tag tag-blue">OpenAI Embeddings</span>
+            <span class="tag tag-blue">FastAPI</span>
+            <span class="tag tag-blue">WebSocket</span>
+            <span class="tag tag-plain">Vector Store</span>
+            <span class="tag tag-plain">Async Python</span>
           </div>
         </div>
       </section>
@@ -842,6 +865,7 @@
             <span class="sk">Tool Use</span>
             <span class="sk">Function Calling</span>
             <span class="sk">Document AI</span>
+            <span class="sk">Human-in-the-Loop</span>
             <span class="sk">Realtime Voice</span>
             <span class="sk">Sub-agents</span>
             <span class="sk">Hugging Face</span>

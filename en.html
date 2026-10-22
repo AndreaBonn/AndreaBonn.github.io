@@ -28,6 +28,31 @@
     --green: #2d6a4f;
     --green-light: #eaf3ee;
     --rule: #d8d4cc;
+    --on-blue: #ffffff;
+    --blue-hover: #163d6b;
+  }
+
+  @media screen and (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14161a;
+      --bg2: #1c1f24;
+      --surface: #1b1e23;
+      --border: #2e333b;
+      --border-strong: #454b56;
+      --ink: #ece9e3;
+      --ink-mid: #cbc7bf;
+      --ink-soft: #aaa59c;
+      --ink-faint: #8f8a81;
+      --blue: #8fb3e0;
+      --blue-light: #1e2938;
+      --gold: #d4b46a;
+      --gold-light: #29241a;
+      --green: #7cc4a0;
+      --green-light: #182720;
+      --rule: #2e333b;
+      --on-blue: #14161a;
+      --blue-hover: #a9c5e8;
+    }
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -69,7 +94,7 @@
   }
 
   .name-block h1 em {
-    font-style: italic;
+    font-style: normal;
     font-weight: 400;
     color: var(--blue);
   }
@@ -95,7 +120,7 @@
   .contact-block {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 12px;
     align-items: flex-end;
     padding-bottom: 4px;
   }
@@ -108,48 +133,24 @@
     font-size: 14px;
     text-decoration: none;
     transition: color 0.2s;
-    font-weight: 300;
+    font-weight: 400;
   }
 
   .contact-item:hover { color: var(--blue); }
-
-  .pdf-download {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    margin-top: 4px;
-    padding: 5px 14px;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    color: var(--surface);
-    background: var(--blue);
-    border-radius: 3px;
-    text-decoration: none;
-    transition: background 0.2s, transform 0.1s;
-  }
-
-  .pdf-download:hover { background: #163d6b; transform: translateY(-1px); }
-  .pdf-download .c-icon { color: var(--surface); }
 
   .lang-switch {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    margin-top: 4px;
-    padding: 5px 12px;
+    padding: 5px 10px;
     font-size: 13px;
     font-weight: 500;
     letter-spacing: 0.04em;
-    color: var(--ink-mid);
+    color: var(--ink-faint);
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 3px;
-    text-decoration: none;
-    transition: border-color 0.2s, color 0.2s, transform 0.1s;
   }
-
-  .lang-switch:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-1px); }
 
   .c-icon {
     width: 15px;
@@ -166,11 +167,12 @@
 
   .sec-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 12.5px;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--ink-soft);
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--ink);
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
     margin-bottom: 20px;
     display: flex;
     align-items: center;
@@ -188,19 +190,15 @@
   section { margin-bottom: 36px; }
 
   .intro-text {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 19px;
-    font-weight: 300;
-    line-height: 1.75;
+    font-size: 16.5px;
+    line-height: 1.65;
     color: var(--ink-mid);
-    font-style: italic;
     padding-left: 20px;
     border-left: 2px solid var(--gold);
   }
 
   .intro-text strong {
-    font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--ink);
   }
 
@@ -252,7 +250,6 @@
     color: var(--ink-mid);
     font-size: 15px;
     line-height: 1.7;
-    font-weight: 300;
     margin-bottom: 12px;
   }
 
@@ -277,7 +274,6 @@
     color: var(--ink-mid);
     font-size: 14.5px;
     line-height: 1.55;
-    font-weight: 300;
   }
 
   .exp-bullets li::before {
@@ -298,17 +294,12 @@
   }
 
   .tag {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
+    font-size: 12.5px;
     padding: 3px 10px;
     border-radius: 2px;
-    font-weight: 300;
+    background: var(--bg2);
+    color: var(--ink-soft);
   }
-
-  .tag-blue  { background: var(--blue-light); color: var(--blue); }
-  .tag-gold  { background: var(--gold-light); color: var(--gold); }
-  .tag-green { background: var(--green-light); color: var(--green); }
-  .tag-plain { background: var(--bg2); color: var(--ink-soft); }
 
   .edu-item {
     display: grid;
@@ -357,9 +348,9 @@
   .sidebar section { margin-bottom: 28px; }
 
   .skill-cat {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.12em;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--gold);
     margin-bottom: 7px;
@@ -382,7 +373,6 @@
     background: var(--surface);
     border: 1px solid var(--border);
     color: var(--ink-mid);
-    font-weight: 300;
     transition: all 0.15s;
   }
 
@@ -401,33 +391,6 @@
     gap: 8px;
   }
 
-  .kpi {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 3px;
-    padding: 10px 10px 8px;
-    text-align: center;
-    transition: border-color 0.2s;
-  }
-
-  .kpi:hover { border-color: var(--blue); }
-
-  .kpi-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 28px;
-    font-weight: 500;
-    color: var(--blue);
-    line-height: 1;
-    margin-bottom: 4px;
-  }
-
-  .kpi-label {
-    font-size: 11.5px;
-    color: var(--ink-soft);
-    line-height: 1.3;
-    font-weight: 300;
-  }
-
   .lang-row {
     display: flex;
     justify-content: space-between;
@@ -440,8 +403,7 @@
   .lang-name { font-size: 14.5px; color: var(--ink); font-weight: 400; }
 
   .lang-badge {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11.5px;
+    font-size: 12px;
     padding: 3px 8px;
     border-radius: 2px;
     background: var(--bg2);
@@ -477,9 +439,9 @@
   }
 
   .callout-label {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 10.5px;
-    letter-spacing: 0.14em;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--blue);
     margin-bottom: 4px;
@@ -489,16 +451,8 @@
   .callout-text {
     font-size: 14px;
     color: var(--ink-mid);
-    font-weight: 300;
     line-height: 1.5;
   }
-
-  .callout.gold-variant {
-    background: var(--gold-light);
-    border-left-color: var(--gold);
-  }
-
-  .callout.gold-variant .callout-label { color: var(--gold); }
 
 
   .exp-company-block {
@@ -524,8 +478,7 @@
   }
 
   .exp-company-subtitle {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
+    font-size: 12px;
     color: var(--gold);
     letter-spacing: 0.05em;
     margin-bottom: 16px;
@@ -570,11 +523,158 @@
     top: 8px;
   }
 
-  .role-qualifier {
-    font-weight: 300;
-    color: var(--ink-soft);
+  /* Recruiter-oriented components: header CTA, KPI strip, section nav, highlights, cards */
+  .pitch { margin-top: 14px; font-size: 18px; line-height: 1.45; color: var(--ink); max-width: 32em; }
+
+  .cta-row { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 18px;
     font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.1s;
   }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-primary { background: var(--blue); color: var(--on-blue); }
+  .btn-primary .c-icon { color: var(--on-blue); }
+  .btn-primary:hover { background: var(--blue-hover); }
+  .btn-ghost { background: var(--surface); border-color: var(--border); color: var(--ink-mid); }
+  .btn-ghost:hover { border-color: var(--blue); color: var(--blue); }
+  .btn-on-blue { background: var(--on-blue); color: var(--blue); }
+  .btn-on-blue:hover { background: var(--blue-light); }
+
+  .icon-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; justify-content: flex-end; }
+  .icon-link { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 3px; color: var(--ink-mid); }
+  .icon-link .c-icon { width: 18px; height: 18px; color: currentColor; }
+  .icon-link:hover { color: var(--blue); background: var(--blue-light); }
+
+  .lang-switch [aria-current] { color: var(--blue); font-weight: 600; }
+  .lang-switch a { color: var(--ink-soft); text-decoration: none; padding: 0 4px; }
+  .lang-switch a:hover { color: var(--blue); }
+
+  .kpi-strip {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin-bottom: 28px;
+  }
+  .kpi-cell { background: var(--surface); padding: 14px 16px; min-width: 0; }
+  .kpi-cell b { display: block; font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 500; line-height: 1; color: var(--blue); margin-bottom: 6px; }
+  .kpi-cell > span { display: block; font-size: 13px; line-height: 1.35; color: var(--ink-mid); }
+
+  .section-nav {
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    display: flex;
+    gap: 6px 22px;
+    flex-wrap: wrap;
+    background: var(--bg);
+    border-bottom: 1px solid var(--rule);
+    padding: 12px 0 10px;
+    margin-bottom: 36px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .section-nav a { color: var(--ink-mid); text-decoration: none; padding: 4px 0; }
+  .section-nav a:hover { color: var(--blue); }
+  .section-nav a[aria-current] { color: var(--blue); box-shadow: inset 0 -2px 0 var(--blue); }
+  section[id], .exp-item[id], .exp-sub-item[id] { scroll-margin-top: 72px; }
+  .exp-item:target, .exp-sub-item:target { animation: targetFlash 2.2s ease; }
+  @keyframes targetFlash {
+    0%, 40% { background: var(--gold-light); box-shadow: 0 0 0 10px var(--gold-light); }
+    100% { background: transparent; box-shadow: 0 0 0 10px transparent; }
+  }
+
+  .intro-lead { margin-bottom: 10px; }
+  .intro-points { list-style: none; }
+  .intro-points li { position: relative; padding-left: 17px; margin-bottom: 6px; }
+  .intro-points li::before { content: '\25B8'; position: absolute; left: 0; top: 1px; color: var(--gold); font-size: 12px; }
+
+  .honors { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: 40px; }
+  .honor { background: var(--surface); border-top: 2px solid var(--gold); padding: 12px 14px; min-width: 0; }
+  .honor b { display: block; font-size: 14.5px; font-weight: 600; line-height: 1.3; margin-bottom: 4px; }
+  .honor span { display: block; font-size: 13px; line-height: 1.4; color: var(--ink-mid); }
+
+  .growth { list-style: none; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 2px solid var(--border); margin-bottom: 28px; }
+  .growth li { position: relative; padding: 12px 8px 0 0; min-width: 0; }
+  .growth li::before { content: ''; position: absolute; top: -6px; left: 0; width: 10px; height: 10px; border-radius: 50%; background: var(--border-strong); }
+  .growth b { display: block; font-size: 13.5px; font-weight: 600; line-height: 1.3; }
+  .growth span { font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: var(--ink-soft); }
+  .growth .now::before { background: var(--blue); }
+  .growth .now b { color: var(--blue); }
+
+  .company-note { font-weight: 400; font-size: 12px; letter-spacing: 0.02em; color: var(--ink-soft); text-transform: none; }
+  .exp-oneline { font-size: 14.5px; color: var(--ink-mid); }
+  .exp-oneline b { font-weight: 500; color: var(--ink); }
+
+  .exp-results { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 10px; }
+  .exp-results span { font-size: 13.5px; font-weight: 500; color: var(--ink); background: var(--gold-light); border-left: 2px solid var(--gold); padding: 3px 9px; }
+  .exp-bullets b { font-weight: 600; color: var(--ink); }
+  .exp-more { margin-bottom: 12px; }
+  .exp-more summary {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--blue);
+    border-bottom: 1px dotted currentColor;
+    padding: 4px 0 1px;
+    list-style: none;
+  }
+  .exp-more summary::-webkit-details-marker { display: none; }
+  .exp-more summary::after { content: ' +'; }
+  .exp-more[open] summary::after { content: ' \2212'; }
+  .exp-more[open] summary { margin-bottom: 8px; }
+
+  .callout-proof { display: inline-block; margin-top: 6px; font-size: 13px; font-weight: 500; color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
+
+  .core-stack { display: flex; flex-wrap: wrap; gap: 6px; background: var(--surface); border: 1px solid var(--border); padding: 12px; margin-bottom: 4px; }
+  .core-stack .sk { font-size: 14.5px; padding: 5px 12px; text-decoration: underline dotted; text-underline-offset: 3px; }
+  .core-stack .sk:hover { text-decoration-style: solid; }
+  .skills-rest .sk { font-size: 12.5px; padding: 2px 8px; }
+
+  .wide-part { border-top: 1px solid var(--rule); padding-top: 36px; }
+  .wide-part .exp-desc, .oss-others { max-width: 75ch; }
+  .oss-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr)); gap: 12px; margin-bottom: 14px; }
+  .oss-card { display: flex; flex-direction: column; gap: 6px; background: var(--surface); border: 1px solid var(--border); padding: 14px 16px; min-width: 0; }
+  .oss-card h3 { font-size: 15.5px; font-weight: 600; line-height: 1.35; }
+  .oss-card p { font-size: 14px; line-height: 1.5; color: var(--ink-mid); }
+  .oss-foot { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: auto; padding-top: 6px; font-size: 12.5px; color: var(--ink-soft); }
+  .oss-foot a { color: var(--blue); font-weight: 500; text-decoration: none; }
+  .oss-foot a:hover { text-decoration: underline; }
+  .badge { display: inline-block; vertical-align: 2px; margin-left: 4px; font-size: 11.5px; font-weight: 600; padding: 1px 8px; border-radius: 2px; background: var(--green-light); color: var(--green); }
+  .oss-others { font-size: 14px; color: var(--ink-mid); }
+  .oss-others a, .security-card a { color: var(--blue); text-decoration: none; border-bottom: 1px solid var(--border); }
+
+  .security-card { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--green); padding: 16px 18px; }
+  .security-card .exp-results span { background: var(--green-light); border-left-color: var(--green); }
+  .security-card .exp-desc { margin-bottom: 0; }
+
+  .edu-thesis { font-size: 12.5px; color: var(--ink-soft); margin-top: 4px; }
+
+  .closing { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; background: var(--blue); color: var(--on-blue); padding: 24px 28px; margin-top: 8px; }
+  .closing-title { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 500; line-height: 1.15; }
+  .closing-text { font-size: 14.5px; opacity: 0.9; }
+  .closing-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+
+  .print-contacts { font-size: 12.5px; color: var(--ink-mid); text-align: right; line-height: 1.6; }
+
+  .gdpr-note p { font-size: 11px; color: var(--ink-faint); font-style: italic; text-align: center; margin-top: 12px; }
+
+  .mobile-bar { display: none; }
+
+  .js-reveal .reveal { opacity: 0; transform: translateY(8px); transition: opacity 0.2s ease, transform 0.2s ease; }
+  .js-reveal .reveal.is-visible { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
 
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
@@ -587,8 +687,8 @@
     .screen-only { display: none !important; }
     .print-only { display: block !important; }
     body { background: white; font-size: 14px; }
-    .pdf-download { display: none; }
-    .lang-switch { display: none; }
+    .cta-row, .icon-row, .lang-switch, .section-nav, .mobile-bar, .closing, .exp-more summary { display: none !important; }
+    .js-reveal .reveal { opacity: 1 !important; transform: none !important; }
     .page { padding: 20px 30px; }
     header { padding-bottom: 12px; margin-bottom: 14px; gap: 20px; }
     .name-block h1 { font-size: 42px; margin-bottom: 3px; }
@@ -597,7 +697,7 @@
     .c-icon { width: 11px; height: 11px; }
     .intro-text { font-size: 15px; line-height: 1.45; padding-left: 12px; }
     section { margin-bottom: 10px; }
-    .sec-title { margin-bottom: 6px; font-size: 11.5px; }
+    .sec-title { margin-bottom: 6px; font-size: 15px; padding-bottom: 2px; }
     .exp-item { margin-bottom: 8px; padding-bottom: 8px; break-inside: avoid; }
     .skill-group { break-inside: avoid; }
     .exp-role { font-size: 15px; }
@@ -619,9 +719,6 @@
     .edu-degree { font-size: 14px; }
     .edu-place { font-size: 12px; }
     .edu-grade { font-size: 19px; }
-    .kpi { padding: 7px 7px 5px; }
-    .kpi-num { font-size: 24px; }
-    .kpi-label { font-size: 10px; }
     .callout { padding: 6px 9px; margin-bottom: 4px; }
     .callout-label { font-size: 9px; }
     .callout-text { font-size: 12.5px; line-height: 1.35; }
@@ -635,16 +732,46 @@
     .exp-sub-item { margin-bottom: 8px; padding-bottom: 8px; }
     .exp-sub-item::before { left: -18px; top: 6px; width: 6px; height: 6px; }
     .exp-sub-item.minor::before { left: -17px; width: 5px; height: 5px; }
-    .role-qualifier { font-size: 12px; }
   }
 
   @media (max-width: 768px) {
     .body-grid { grid-template-columns: 1fr; }
     .exp-meta { flex-wrap: wrap; }
     .sidebar { border-left: none; padding-left: 0; border-top: 1px solid var(--rule); padding-top: 28px; }
-    header { grid-template-columns: 1fr; }
-    .contact-block { align-items: flex-start; }
-    .name-block h1 { font-size: 40px; }
+    .page { padding: 28px 20px 96px; }
+    header { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+    .contact-block { align-items: flex-start; grid-column: 1 / -1; }
+    .cta-row, .icon-row { justify-content: flex-start; }
+    .icon-link { width: 44px; height: 44px; }
+    .name-block h1 { font-size: 34px; margin-bottom: 6px; }
+    .subtitle { font-size: 11.5px; letter-spacing: 0.08em; gap: 6px; flex-wrap: wrap; }
+    .pitch { font-size: 16px; }
+    .kpi-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .growth { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 14px; }
+    .subtitle-sep { width: 4px; height: 4px; border-radius: 50%; }
+    .honors { grid-template-columns: minmax(0, 1fr); }
+    .section-nav { flex-wrap: nowrap; overflow-x: auto; gap: 18px; scrollbar-width: none; }
+    .section-nav a { white-space: nowrap; padding: 10px 0; }
+    .closing { padding: 20px; }
+    .mobile-bar {
+      display: flex;
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 200;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      box-shadow: 0 -4px 12px rgba(20, 15, 10, 0.08);
+      font-size: 13px;
+      color: var(--ink-mid);
+    }
+    .mobile-bar-actions { display: flex; gap: 6px; }
+    .mobile-bar .btn { padding: 10px 14px; }
   }
 </style>
 </head>
@@ -659,59 +786,91 @@
         <span class="subtitle-sep"></span>
         LLM & Agentic Systems
       </div>
+      <p class="pitch">I ship AI agents and RAG systems to production for companies: governed, measured, actually used.</p>
     </div>
     <div class="contact-block">
-      <a href="tel:+393930063841" class="contact-item">
-        <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.72 6.72l1.28-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        +39 393 006 3841
-      </a>
-      <a href="mailto:andreabonacci95@protonmail.com" class="contact-item">
-        <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        andreabonacci95@protonmail.com
-      </a>
-      <a href="https://it.linkedin.com/in/andrea-bonacci-b017b0196" target="_blank" class="contact-item">
-        <svg class="c-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-        linkedin.com/in/andrea-bonacci
-      </a>
-      <a href="https://github.com/AndreaBonn" target="_blank" class="contact-item">
-        <svg class="c-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-        github.com/AndreaBonn
-      </a>
-      <span class="contact-item">
-        <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        Cagliari, Italy
-      </span>
-      <a href="andrea_bonacci_cv_en.pdf" download target="_blank" class="pdf-download">
-        <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Download PDF
-      </a>
-      <a href="index.html" class="lang-switch">
-        <span style="font-size:16px;line-height:1;">🇮🇹</span>
-        Italiano
-      </a>
+      <div class="cta-row">
+        <a href="mailto:andreabonacci95@protonmail.com" class="btn btn-primary">
+          <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Email me
+        </a>
+        <a href="andrea_bonacci_cv_en.pdf" download target="_blank" class="btn btn-ghost">
+          <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download PDF
+        </a>
+      </div>
+      <div class="icon-row">
+        <a href="https://it.linkedin.com/in/andrea-bonacci-b017b0196" target="_blank" rel="noopener" class="icon-link" aria-label="LinkedIn" title="linkedin.com/in/andrea-bonacci">
+          <svg class="c-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://github.com/AndreaBonn" target="_blank" rel="noopener" class="icon-link" aria-label="GitHub" title="github.com/AndreaBonn">
+          <svg class="c-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+        </a>
+        <a href="tel:+393930063841" class="icon-link" aria-label="Phone +39 393 006 3841" title="+39 393 006 3841">
+          <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.72 6.72l1.28-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </a>
+        <span class="contact-item">
+          <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Cagliari, Italy
+        </span>
+      </div>
+      <div class="print-only print-contacts">+39 393 006 3841 · andreabonacci95@protonmail.com<br>linkedin.com/in/andrea-bonacci · github.com/AndreaBonn · Cagliari, Italy</div>
+      <nav class="lang-switch" aria-label="Language"><a href="index.html" lang="it" hreflang="it">IT</a><span aria-hidden="true">·</span><span aria-current="page">EN</span></nav>
     </div>
   </header>
+
+  <div class="kpi-strip reveal">
+    <div class="kpi-cell"><b><span id="exp-years">4+</span> years</b><span>of data and AI consulting for enterprise clients</span></div>
+    <div class="kpi-cell"><b>40+</b><span>public repositories, 2 GitHub Marketplace Actions</span></div>
+  </div>
+
+  <nav class="section-nav" aria-label="Sections">
+    <a href="#profile">Profile</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#open-source">Open source</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
   <div class="body-grid">
 
     <div class="left-col">
 
-      <section>
-        <div class="sec-title">Profile</div>
-        <p class="intro-text screen-only">
-          From Data Scientist to <strong>AI Engineer</strong>, with <strong>over <span id="exp-years-text">4</span> years of experience</strong> in data-driven consulting for enterprise clients. Today I design and ship production AI systems: agents and agentic workflows with MCP and tool use, LLM integration (OpenAI, Anthropic), RAG and real-time voice AI, bringing generative AI from prototype to business value. Solid background in end-to-end data analysis: pipelines, BI dashboards and NLP models, from ETL to deployment with FastAPI and Docker. <strong>Academic tutor</strong> for university interns and responsible for <strong>technical interviews</strong> to hire Data Scientists and AI Engineers during the post-acquisition growth phase. Background in Data Science and Business Administration, I also delivered an intensive <strong>8-hour university course</strong> on AI applied to coding.
-        </p>
+      <section id="profile" class="reveal">
+        <h2 class="sec-title">Profile</h2>
+        <div class="intro-text screen-only">
+          <p class="intro-lead">From Data Scientist to <strong>AI Engineer</strong>, <span id="exp-years-text">4</span>+ years of consulting for enterprise clients. Today I ship AI assistants to production that read documents, use company systems and ask a person for confirmation when it matters.</p>
+          <ul class="intro-points">
+            <li><strong>I build</strong> governed AI agents, RAG evaluated with metrics, real-time voice AI.</li>
+            <li><strong>I come from data</strong>: pipelines, BI dashboards and NLP models, from ETL to deployment with FastAPI and Docker.</li>
+            <li><strong>I teach and hire</strong>: tutor for interns, technical interviews for Data Scientists and AI Engineers, an 8-hour university course.</li>
+          </ul>
+        </div>
         <p class="intro-text print-only">
           From Data Scientist to <strong>AI Engineer</strong>, with <strong>over <span>4</span> years of experience</strong> in data-driven consulting for enterprise clients. I design and ship production AI systems: agents and agentic workflows with MCP and tool use, LLM integration (OpenAI, Anthropic), RAG and real-time voice AI. Background in end-to-end data analysis: pipelines, BI dashboards and NLP models. <strong>Academic tutor</strong> for interns and <strong>technical interviewer</strong> for post-acquisition hiring. I also delivered an intensive <strong>8-hour university course</strong> on AI applied to coding.
         </p>
       </section>
 
-      <section>
-        <div class="sec-title">Professional Experience</div>
+      <div class="honors reveal">
+        <div class="honor"><b>University speaker</b><span>8-hour course on AI for coding, University of Cagliari, April 2026</span></div>
+        <div class="honor"><b>RCE vulnerability reported</b><span>Credited in the WinBoat v0.9.1 security release</span></div>
+        <div class="honor"><b>2 GitHub Marketplace Actions</b><span>AI PR Reviewer and AI Changelog Generator</span></div>
+      </div>
+
+      <section id="experience" class="reveal">
+        <h2 class="sec-title">Professional Experience</h2>
+
+        <ol class="growth" aria-label="Growth at Linkalab">
+          <li><b>Data Scientist intern</b><span>Nov 2021</span></li>
+          <li><b>Data Scientist</b><span>Apr 2022</span></li>
+          <li><b>Data Analyst &amp; DS</b><span>Jul 2022</span></li>
+          <li class="now"><b>AI Engineer</b><span>Oct 2025, today</span></li>
+        </ol>
 
         <div class="exp-company-block">
           <div class="exp-company-header">
-            <div class="exp-company-name">Linkalab S.r.l. · Cagliari <span style="font-weight:300;font-size:12px;letter-spacing:0.02em;color:var(--ink-soft);text-transform:none;">— part of Lynx Group since Sep 2025</span></div>
+            <div class="exp-company-name">Linkalab S.r.l. · Cagliari <span class="company-note">— part of Lynx Group since Sep 2025</span></div>
             <div class="exp-period">Nov 2021 → present</div>
           </div>
           <div class="exp-company-subtitle">Consulting company — Internal growth</div>
@@ -723,26 +882,23 @@
                 <div class="exp-role">AI Engineer & Data Analyst</div>
                 <div class="exp-period">Oct 2025 → present</div>
               </div>
-              <div class="exp-desc screen-only">
-                AI Engineering focus: building AI agents and agentic workflows with MCP, tool use, sub-agents, skills and rules. LLM integration via OpenAI and Anthropic APIs. End-to-end development of production AI systems on client projects, including real-time conversational voice AI, AI agents for document and accounting process automation, and RAG systems for document compliance validation against regulatory corpora. Advanced use of Claude Code, Windsurf and Gemini CLI in production. Academic tutor: supervision of university interns, training path design and final evaluation. Leading technical interviews for hiring Data Scientists and AI Engineers during post-acquisition team expansion.
-              </div>
+              <ul class="exp-bullets screen-only">
+                <li>Production AI systems on client projects: real-time voice AI, agents for documents and accounting, RAG for regulatory compliance (details in Client Projects).</li>
+                <li>Tutor for university interns: training path and final evaluation.</li>
+                <li>Technical interviews to hire Data Scientists and AI Engineers after the acquisition.</li>
+              </ul>
               <div class="exp-desc print-only">
                 AI Engineering focus: AI agents and agentic workflows with MCP, tool use, sub-agents and LLM integration (OpenAI, Anthropic). Production AI systems on client projects, including real-time conversational voice AI, agents for document and accounting automation, and RAG for compliance validation against regulatory corpora. Claude Code, Windsurf and Gemini CLI in production. Academic tutor for university interns. Technical interviews for hiring Data Scientists and AI Engineers post-acquisition.
               </div>
               <div class="exp-tags">
-                <span class="tag tag-green">AI Agents</span>
-                <span class="tag tag-green">MCP</span>
-                <span class="tag tag-green">LLM Integration</span>
-                <span class="tag tag-green">Realtime Voice AI</span>
-                <span class="tag tag-green">RAG</span>
-                <span class="tag tag-green">Document AI</span>
-                <span class="tag tag-blue">Claude Code</span>
-                <span class="tag tag-gold">Academic Tutor</span>
-                <span class="tag tag-gold">Technical Hiring</span>
+                <span class="tag">AI Agents</span>
+                <span class="tag">RAG</span>
+                <span class="tag">Voice AI</span>
+                <span class="tag">Technical Hiring</span>
               </div>
             </div>
 
-            <div class="exp-sub-item">
+            <div class="exp-sub-item" id="data-role">
               <div class="exp-meta">
                 <div class="exp-role">Data Analyst & Data Scientist</div>
                 <div class="exp-period">Jul 2022 → Oct 2025</div>
@@ -754,38 +910,21 @@
                 End-to-end data pipelines and BI dashboards (Power BI, QuickSight, Tableau, Looker Studio) for enterprise clients. NLP, sentiment analysis, time series. Deployment with FastAPI and Docker on AWS.
               </div>
               <div class="exp-tags">
-                <span class="tag tag-blue">Python</span>
-                <span class="tag tag-blue">SQL</span>
-                <span class="tag tag-gold">Power BI</span>
-                <span class="tag tag-gold">QuickSight</span>
-                <span class="tag tag-gold">Tableau</span>
-                <span class="tag tag-blue">NLP</span>
-                <span class="tag tag-plain">FastAPI</span>
-                <span class="tag tag-plain">Docker</span>
-                <span class="tag tag-plain">AWS S3/Athena</span>
+                <span class="tag">Python · SQL</span>
+                <span class="tag">Power BI</span>
+                <span class="tag">NLP</span>
+                <span class="tag">AWS</span>
               </div>
             </div>
 
             <div class="exp-sub-item minor">
-              <div class="exp-meta">
-                <div class="exp-role">Data Scientist <span class="role-qualifier">— contract</span></div>
-                <div class="exp-period">Apr 2022 → Jun 2022</div>
-              </div>
-              <div class="exp-desc">Post-internship hire. First autonomous data analysis and modeling projects for enterprise clients.</div>
-            </div>
-
-            <div class="exp-sub-item minor">
-              <div class="exp-meta">
-                <div class="exp-role">Data Scientist <span class="role-qualifier">— curricular internship</span></div>
-                <div class="exp-period">Nov 2021 → Mar 2022</div>
-              </div>
-              <div class="exp-desc">Master's thesis internship. Development of an Italian Emotion Analysis system for online reputation monitoring.</div>
+              <p class="exp-oneline"><b>Nov 2021 → Jun 2022 · Data Scientist</b>, master's thesis internship (Italian Emotion Analysis for online reputation monitoring) followed by a contract.</p>
             </div>
 
           </div>
         </div>
 
-        <div class="exp-item">
+        <div class="exp-item" id="speaker">
           <div class="exp-meta">
             <div class="exp-role">Speaker — University Course</div>
             <div class="exp-period">April 2026</div>
@@ -798,21 +937,20 @@
             Two intensive sessions (<strong>8 hours total</strong>) on <em>"Artificial Intelligence Applied to Coding"</em>. LLM architecture, advanced prompt engineering, agentic coding with CLI tools, MCP integration and custom Skills for AI agents. Hands-on workshops with students.
           </div>
           <div class="exp-tags">
-            <span class="tag tag-green">AI for Coding</span>
-            <span class="tag tag-green">Prompt Engineering</span>
-            <span class="tag tag-blue">LLM</span>
-            <span class="tag tag-green">MCP</span>
-            <span class="tag tag-plain">University Lecture</span>
+            <span class="tag">AI for Coding</span>
+            <span class="tag">Prompt Engineering</span>
+            <span class="tag">MCP</span>
+            <span class="tag">University Lecture</span>
           </div>
         </div>
 
       </section>
 
-      <section>
-        <div class="sec-title">Client Projects</div>
+      <section id="projects" class="reveal">
+        <h2 class="sec-title">Client Projects</h2>
         <div class="exp-company" style="margin-bottom:8px;">On a contract basis for enterprise clients · details anonymized for confidentiality</div>
 
-        <div class="exp-item">
+        <div class="exp-item" id="prj-governance">
           <div class="exp-meta">
             <div class="exp-role">AI Governance Platform for Agents</div>
             <div class="exp-period">2026 · in-house product</div>
@@ -820,198 +958,111 @@
           <div class="exp-lead">
             Gateway and control plane that make AI agents usable in regulated industries: every call to models and tools goes through identity, policy decision and audit.
           </div>
-          <ul class="exp-bullets">
-            <li>LLM gateway with agent identity (Keycloak), policy-as-code (OPA/Rego), append-only audit trail and EU data residency.</li>
-            <li>Multi-tenant control plane designed and built single-handedly: human-in-the-loop approvals, policy blocks, per-agent costs (FinOps).</li>
-            <li>Sandboxed agent with 19 MCP tools and 100 policy rules, fail-closed multi-user isolation; enterprise chat assistant in a client trial.</li>
-          </ul>
+          <div class="exp-results"><span>19 MCP tools</span><span>100 policy rules</span><span>in a client trial</span></div>
+          <details class="exp-more">
+            <summary>Technical details</summary>
+            <ul class="exp-bullets">
+              <li>LLM gateway with agent identity (Keycloak), policy-as-code (OPA/Rego), append-only audit trail and EU data residency.</li>
+              <li>Multi-tenant control plane designed and built single-handedly: human-in-the-loop approvals, policy blocks, per-agent costs (FinOps).</li>
+              <li>Sandboxed agent with <b>19 MCP tools</b> and <b>100 policy rules</b>, fail-closed multi-user isolation; enterprise chat assistant in a client trial.</li>
+            </ul>
+          </details>
           <div class="exp-tags">
-            <span class="tag tag-green">AI Governance</span>
-            <span class="tag tag-green">MCP</span>
-            <span class="tag tag-green">Policy-as-Code</span>
-            <span class="tag tag-blue">OPA/Rego</span>
-            <span class="tag tag-blue">Keycloak</span>
-            <span class="tag tag-blue">LiteLLM</span>
-            <span class="tag tag-plain">FastAPI · React</span>
+            <span class="tag">AI Governance</span>
+            <span class="tag">MCP</span>
+            <span class="tag">OPA/Rego</span>
+            <span class="tag">FastAPI · React</span>
           </div>
         </div>
 
-        <div class="exp-item">
+        <div class="exp-item" id="prj-rag">
           <div class="exp-meta">
             <div class="exp-role">Conversational RAG Agent for a Manufacturer's Website</div>
           </div>
           <div class="exp-lead">
             Multilingual assistant for the public website of an international industrial group, with answers that cite the source document section and a log of unanswered questions for the editorial team.
           </div>
-          <ul class="exp-bullets">
-            <li>Hybrid lexical + vector retrieval over 800+ technical documents: relevant context raised from 2% to 92%.</li>
-            <li>Continuous evaluation with DeepEval: faithfulness 1.00, contextual recall 0.90, no undue refusals.</li>
-            <li>AWS Bedrock in an EU region, pgvector, deployed on EC2; 4,000+ tests at 100% coverage.</li>
-          </ul>
+          <div class="exp-results"><span>relevant context 2% → 92%</span><span>faithfulness 1.00</span><span>4,000+ tests, 100% coverage</span></div>
+          <details class="exp-more">
+            <summary>Technical details</summary>
+            <ul class="exp-bullets">
+              <li>Raised relevant context <b>from 2% to 92%</b> with hybrid retrieval (lexical + vector) over 800+ technical documents.</li>
+              <li>Measured every answer with DeepEval: <b>faithfulness 1.00</b>, contextual recall 0.90, no undue refusals.</li>
+              <li>AWS Bedrock in an EU region, pgvector, deployed on EC2; <b>4,000+ tests</b> at 100% coverage.</li>
+            </ul>
+          </details>
           <div class="exp-tags">
-            <span class="tag tag-green">RAG</span>
-            <span class="tag tag-green">Hybrid Search</span>
-            <span class="tag tag-green">LLM Eval</span>
-            <span class="tag tag-blue">AWS Bedrock</span>
-            <span class="tag tag-blue">pgvector</span>
-            <span class="tag tag-plain">DeepEval</span>
+            <span class="tag">RAG</span>
+            <span class="tag">LLM Eval</span>
+            <span class="tag">AWS Bedrock</span>
+            <span class="tag">pgvector</span>
           </div>
         </div>
 
-        <div class="exp-item">
+        <div class="exp-item" id="prj-voice">
           <div class="exp-meta">
             <div class="exp-role">Real-Time Conversational Voice AI Systems</div>
           </div>
           <div class="exp-lead">
             Low-latency speech-to-speech AI conversation, with automated evaluation of interactions.
           </div>
-          <ul class="exp-bullets">
-            <li>OpenAI Realtime API, Gemini Live and streaming transcription (AssemblyAI), with multi-provider fallback and circuit breakers.</li>
-            <li>RAG knowledge base queried via function calling; hallucination checks during evaluation.</li>
-          </ul>
+          <div class="exp-results"><span>multi-provider fallback</span><span>hallucination checks</span></div>
+          <details class="exp-more">
+            <summary>Technical details</summary>
+            <ul class="exp-bullets">
+              <li>OpenAI Realtime API, Gemini Live and streaming transcription (AssemblyAI), with multi-provider fallback and circuit breakers.</li>
+              <li>RAG knowledge base queried via function calling; hallucination checks during evaluation.</li>
+            </ul>
+          </details>
           <div class="exp-tags">
-            <span class="tag tag-green">Realtime Voice AI</span>
-            <span class="tag tag-green">OpenAI Realtime API</span>
-            <span class="tag tag-green">Function Calling</span>
-            <span class="tag tag-plain">Circuit Breaker</span>
+            <span class="tag">Voice AI</span>
+            <span class="tag">OpenAI Realtime</span>
+            <span class="tag">Function Calling</span>
           </div>
         </div>
 
-        <div class="exp-item">
+        <div class="exp-item" id="prj-compliance">
           <div class="exp-meta">
             <div class="exp-role">RAG &amp; Document Intelligence for Compliance</div>
           </div>
           <div class="exp-lead">
             Compliance validation of contracts, policies and playbooks against a regulatory corpus, with source citations and human review.
           </div>
-          <ul class="exp-bullets">
-            <li>Hybrid search (BM25 + embeddings) and multi-stage agentic orchestration for structured verdicts with regulatory references.</li>
-            <li>Every finding links back to its source, to block hallucinations; human-in-the-loop with checkpoints and audit trail (async FastAPI, WebSocket).</li>
-          </ul>
+          <div class="exp-results"><span>every finding cites its source</span><span>human review with audit trail</span></div>
+          <details class="exp-more">
+            <summary>Technical details</summary>
+            <ul class="exp-bullets">
+              <li>Hybrid search (BM25 + embeddings) and multi-stage agentic orchestration for structured verdicts with regulatory references.</li>
+              <li>Every finding links back to its source, to block hallucinations; human-in-the-loop with checkpoints and audit trail (async FastAPI, WebSocket).</li>
+            </ul>
+          </details>
           <div class="exp-tags">
-            <span class="tag tag-green">RAG</span>
-            <span class="tag tag-green">LLM Orchestration</span>
-            <span class="tag tag-green">Structured Output</span>
-            <span class="tag tag-green">Human-in-the-Loop</span>
+            <span class="tag">RAG</span>
+            <span class="tag">LLM Orchestration</span>
+            <span class="tag">Structured Output</span>
+            <span class="tag">Human-in-the-Loop</span>
           </div>
         </div>
 
-        <div class="exp-item">
+        <div class="exp-item" id="prj-finance">
           <div class="exp-meta">
             <div class="exp-role">AI Agents for Document &amp; Finance Automation</div>
           </div>
           <div class="exp-lead">
             Automation of document and accounting processes, such as reconciliation of related documents.
           </div>
-          <ul class="exp-bullets">
-            <li>Agents with function calling and validated output (Pydantic); extraction from XML, PDF and digitally signed files.</li>
-            <li>Deterministic matching with tolerances and confidence scoring, ERP integration and human review of uncertain cases.</li>
-          </ul>
+          <div class="exp-results"><span>output validated with Pydantic</span><span>ERP integration</span></div>
+          <details class="exp-more">
+            <summary>Technical details</summary>
+            <ul class="exp-bullets">
+              <li>Agents with function calling and validated output (Pydantic); extraction from XML, PDF and digitally signed files.</li>
+              <li>Deterministic matching with tolerances and confidence scoring, ERP integration and human review of uncertain cases.</li>
+            </ul>
+          </details>
           <div class="exp-tags">
-            <span class="tag tag-green">AI Agent</span>
-            <span class="tag tag-green">Document AI</span>
-            <span class="tag tag-green">Information Extraction</span>
-          </div>
-        </div>
-
-      </section>
-
-      <section>
-        <div class="sec-title">Personal Projects &amp; Open Source</div>
-        <div class="exp-company" style="margin-bottom:8px;"><a href="https://github.com/AndreaBonn" style="color:var(--blue);text-decoration:none;">github.com/AndreaBonn</a> · 40+ public repositories</div>
-
-        <div class="exp-item">
-          <div class="exp-meta">
-            <div class="exp-role">Local AI: Voice, Transcription, Images</div>
-            <div class="exp-period">Ongoing</div>
-          </div>
-          <div class="exp-desc">
-            <a href="https://github.com/AndreaBonn/clone-my-voice" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">Clone My Voice</a>: offline voice cloning and dubbing on GPU, 6 isolated TTS engines, Whisper, blind A/B tests. <a href="https://github.com/AndreaBonn/speech-to-text" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">Speech-to-Text</a>: from recorded lectures to study material with faster-whisper, a local LLM and evaluated hybrid RAG (semantic retrieval 100% vs 56% BM25 on 82 questions). <a href="https://github.com/AndreaBonn/image-generator" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">Image Generator</a> on SDXL and FLUX, <a href="https://github.com/AndreaBonn/video-anonimyzer" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">video anonymization</a> with YOLO.
-          </div>
-          <div class="exp-tags">
-            <span class="tag tag-green">Voice Cloning</span>
-            <span class="tag tag-green">Whisper</span>
-            <span class="tag tag-green">RAG Eval</span>
-            <span class="tag tag-green">Diffusion</span>
-            <span class="tag tag-blue">Ollama</span>
-            <span class="tag tag-plain">CUDA</span>
-          </div>
-        </div>
-
-        <div class="exp-item">
-          <div class="exp-meta">
-            <div class="exp-role">Agentic Tooling</div>
-            <div class="exp-period">Ongoing</div>
-          </div>
-          <div class="exp-desc">
-            <a href="https://github.com/AndreaBonn/claude-phone" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">Claude Phone</a>: Claude Code driven from Telegram, with a permission gate on tools (MCP included), human approval and audit log. Two GitHub Marketplace Actions with multi-provider LLM fallback: <a href="https://github.com/AndreaBonn/ai-pr-reviewer" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">AI PR Reviewer</a> and <a href="https://github.com/AndreaBonn/ai-changelog-generator" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">AI Changelog Generator</a>. <a href="https://github.com/AndreaBonn/claude-code-available-tools" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">Claude Code Tools Explorer</a> (TUI) and <a href="https://github.com/AndreaBonn/agy-profiles" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">multi-account manager for Antigravity CLI</a>.
-          </div>
-          <div class="exp-tags">
-            <span class="tag tag-green">Claude Code</span>
-            <span class="tag tag-green">Human-in-the-Loop</span>
-            <span class="tag tag-green">GitHub Actions</span>
-            <span class="tag tag-plain">Textual</span>
-          </div>
-        </div>
-
-        <div class="exp-item">
-          <div class="exp-meta">
-            <div class="exp-role">Web &amp; Desktop Products</div>
-            <div class="exp-period">Ongoing</div>
-          </div>
-          <div class="exp-desc">
-            10 live PWAs with end-to-end ownership, including <a href="https://github.com/AndreaBonn/impara-italiano" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">Learn Italian</a> (150 lessons A1-C2, spaced repetition), <a href="https://github.com/AndreaBonn/meteo-e-spiagge" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">Meteo &amp; Spiagge</a>, <a href="https://github.com/AndreaBonn/PlotMark" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">PlotMark</a>, <a href="https://github.com/AndreaBonn/BetTracker-by-Bonn" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">BetTracker</a> (OCR with Gemini) and apps for personal finance, health and shared expenses. Linux desktop tools: <a href="https://github.com/AndreaBonn/remote-terminal-bot" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">remote shell via Telegram</a>, <a href="https://github.com/AndreaBonn/command-quiver" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">Command Quiver</a>, <a href="https://github.com/AndreaBonn/sysbar" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">Sysbar</a>, <a href="https://github.com/AndreaBonn/nautilus-extensions" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">Nautilus extensions</a>.
-          </div>
-          <div class="exp-tags">
-            <span class="tag tag-blue">React</span>
-            <span class="tag tag-blue">TypeScript</span>
-            <span class="tag tag-green">Firebase</span>
-            <span class="tag tag-blue">PWA</span>
-            <span class="tag tag-plain">GTK4</span>
-          </div>
-        </div>
-
-        <div class="exp-item">
-          <div class="exp-meta">
-            <div class="exp-role">Security & Responsible Disclosure</div>
-            <div class="exp-period">Aug 2026</div>
-          </div>
-          <div class="exp-desc screen-only">
-            Reported a critical RCE vulnerability (unauthenticated code execution as SYSTEM) in <a href="https://github.com/winboat-org/winboat" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">WinBoat</a>, an open source project. Private responsible disclosure, with runtime-verified patches and a fix shipped within 4 hours of first contact. Credited in the <a href="https://github.com/winboat-org/winboat/releases/tag/v0.9.1" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">v0.9.1 security release</a>.
-          </div>
-          <div class="exp-desc print-only">
-            Reported a critical RCE vulnerability (unauthenticated code execution as SYSTEM) in <a href="https://github.com/winboat-org/winboat" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">WinBoat</a>, an open source project. Private responsible disclosure with runtime-verified patches, fixed within 4 hours of first contact. Credited in the <a href="https://github.com/winboat-org/winboat/releases/tag/v0.9.1" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">v0.9.1 security release</a>.
-          </div>
-          <div class="exp-tags">
-            <span class="tag tag-green">Responsible Disclosure</span>
-            <span class="tag tag-green">RCE</span>
-            <span class="tag tag-plain">Open Source</span>
-          </div>
-        </div>
-
-      </section>
-
-      <section>
-        <div class="sec-title">Education</div>
-
-        <div class="edu-item">
-          <div>
-            <div class="edu-degree">Master's Degree — Data Science & Business Informatics</div>
-            <div class="edu-place">University of Pisa</div>
-            <div style="font-size:11.5px;color:var(--ink-soft);font-weight:300;margin-top:4px;font-style:italic;">Thesis: Italian Emotion Analysis for online reputation monitoring</div>
-          </div>
-          <div class="edu-right">
-            <div class="edu-year">2022</div>
-          </div>
-        </div>
-
-        <div class="edu-item">
-          <div>
-            <div class="edu-degree" style="font-weight:400;">Bachelor's Degree — Business Administration</div>
-            <div class="edu-place">University of Pisa</div>
-          </div>
-          <div class="edu-right">
-            <div class="edu-year">2018</div>
+            <span class="tag">AI Agent</span>
+            <span class="tag">Document AI</span>
+            <span class="tag">Information Extraction</span>
           </div>
         </div>
 
@@ -1021,123 +1072,118 @@
 
     <div class="sidebar">
 
-      <section>
-        <div class="sec-title">At a Glance</div>
-        <div style="display:flex;gap:10px;">
-          <div class="kpi" style="flex:1;">
-            <div class="kpi-num" id="exp-years">4+</div>
-            <div class="kpi-label">years of professional experience</div>
+      <section class="reveal">
+        <h2 class="sec-title">Differentiators</h2>
+        <div class="callout">
+          <div class="callout-label">I speak business</div>
+          <div class="callout-text">Business degree and a Data Science master's: I start from the company's problem, not from the model.</div>
+          <a class="callout-proof" href="#prj-rag">Proof: RAG for an industrial group</a>
+        </div>
+        <div class="callout">
+          <div class="callout-label">AI you can control</div>
+          <div class="callout-text">Agents with identity, policy and audit, built for regulated industries.</div>
+          <a class="callout-proof" href="#prj-governance">Proof: AI governance platform</a>
+        </div>
+        <div class="callout">
+          <div class="callout-label">I teach and hire</div>
+          <div class="callout-text">Tutor for interns, technical hiring interviews, an 8-hour university course.</div>
+          <a class="callout-proof" href="#speaker">Proof: course at the University of Cagliari</a>
+        </div>
+      </section>
+
+      <section id="skills" class="reveal">
+        <h2 class="sec-title">Skills</h2>
+
+        <div class="skill-cat">Core stack</div>
+        <div class="core-stack">
+          <a class="sk strong" href="#data-role">Python</a>
+          <a class="sk strong" href="#prj-governance">AI Agents</a>
+          <a class="sk strong" href="#prj-governance">MCP</a>
+          <a class="sk strong" href="#prj-rag">RAG</a>
+          <a class="sk strong" href="#prj-rag">LLM Eval</a>
+          <a class="sk strong" href="#prj-compliance">FastAPI</a>
+          <a class="sk strong" href="#prj-rag">AWS Bedrock</a>
+          <a class="sk strong" href="#prj-governance">Policy-as-Code</a>
+        </div>
+
+        <div class="skills-rest">
+          <div class="skill-group">
+            <div class="skill-cat">AI & LLM</div>
+            <div class="skill-list">
+              <span class="sk">AI Agents</span>
+              <span class="sk">MCP</span>
+              <span class="sk">Prompt Eng.</span>
+              <span class="sk">RAG</span>
+              <span class="sk">OpenAI API</span>
+              <span class="sk">Anthropic API</span>
+              <span class="sk">Tool Use</span>
+              <span class="sk">Function Calling</span>
+              <span class="sk">Document AI</span>
+              <span class="sk">Human-in-the-Loop</span>
+              <span class="sk">Realtime Voice</span>
+              <span class="sk">Sub-agents</span>
+              <span class="sk">Hugging Face</span>
+              <span class="sk">Ollama</span>
+              <span class="sk">LLM Eval</span>
+              <span class="sk">Agent Skills</span>
+              <span class="sk">DeepEval</span>
+              <span class="sk">Agentic Coding Config</span>
+            </div>
           </div>
-          <div class="kpi" style="flex:1;">
-            <div class="kpi-num">40+</div>
-            <div class="kpi-label">open source repositories</div>
+
+          <div class="skill-group">
+            <div class="skill-cat">Governance & Security</div>
+            <div class="skill-list">
+              <span class="sk">Policy-as-Code</span>
+              <span class="sk">OPA/Rego</span>
+              <span class="sk">Keycloak</span>
+              <span class="sk">Audit Trail</span>
+              <span class="sk">Least Privilege</span>
+              <span class="sk">Responsible Disclosure</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-cat">Data Science</div>
+            <div class="skill-list">
+              <span class="sk">Python</span>
+              <span class="sk">SQL</span>
+              <span class="sk">NLP</span>
+              <span class="sk">Sentiment Analysis</span>
+              <span class="sk">Pandas</span>
+              <span class="sk">Time Series</span>
+              <span class="sk">Computer Vision</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-cat">Business Intelligence</div>
+            <div class="skill-list">
+              <span class="sk">Power BI</span>
+              <span class="sk">QuickSight</span>
+              <span class="sk">Tableau</span>
+              <span class="sk">Looker Studio</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-cat">MLOps & Cloud</div>
+            <div class="skill-list">
+              <span class="sk">Docker</span>
+              <span class="sk">FastAPI</span>
+              <span class="sk">AWS S3</span>
+              <span class="sk">Athena</span>
+              <span class="sk">AWS Bedrock</span>
+              <span class="sk">pgvector</span>
+              <span class="sk">Flask</span>
+              <span class="sk">GitHub</span>
+            </div>
           </div>
         </div>
       </section>
 
-      <section>
-        <div class="sec-title">Differentiators</div>
-        <div class="callout">
-          <div class="callout-label">AI + Business</div>
-          <div class="callout-text">Business degree + Data Science master's = I build AI that solves real problems, from idea to deployment.</div>
-        </div>
-        <div class="callout">
-          <div class="callout-label">AI Engineering</div>
-          <div class="callout-text">Advanced use of LLMs, AI agents and MCP to build intelligent workflows and automate complex tasks.</div>
-        </div>
-        <div class="callout">
-          <div class="callout-label">Governed, measured AI</div>
-          <div class="callout-text">Agents with identity, policy and audit, built for regulated industries. RAG evaluated with quality metrics.</div>
-        </div>
-        <div class="callout gold-variant">
-          <div class="callout-label">University Speaker</div>
-          <div class="callout-text">AI applied to coding course, University of Cagliari, April 2026 — 8 hours.</div>
-        </div>
-        <div class="callout" style="background:var(--green-light);border-left-color:var(--green);">
-          <div class="callout-label" style="color:var(--green);">Mentoring & Hiring</div>
-          <div class="callout-text">Academic tutor for university interns. Leading technical interviews for post-acquisition team expansion.</div>
-        </div>
-      </section>
-
-      <section>
-        <div class="sec-title">Skills</div>
-
-        <div class="skill-group">
-          <div class="skill-cat">AI & LLM</div>
-          <div class="skill-list">
-            <span class="sk strong">AI Agents</span>
-            <span class="sk strong">MCP</span>
-            <span class="sk strong">Prompt Eng.</span>
-            <span class="sk strong">RAG</span>
-            <span class="sk">OpenAI API</span>
-            <span class="sk">Anthropic API</span>
-            <span class="sk">Tool Use</span>
-            <span class="sk">Function Calling</span>
-            <span class="sk">Document AI</span>
-            <span class="sk">Human-in-the-Loop</span>
-            <span class="sk">Realtime Voice</span>
-            <span class="sk">Sub-agents</span>
-            <span class="sk">Hugging Face</span>
-            <span class="sk">Ollama</span>
-            <span class="sk strong">LLM Eval</span>
-            <span class="sk">Agent Skills</span>
-            <span class="sk">DeepEval</span>
-            <span class="sk">Agentic Coding Config</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <div class="skill-cat">Governance & Security</div>
-          <div class="skill-list">
-            <span class="sk strong">Policy-as-Code</span>
-            <span class="sk">OPA/Rego</span>
-            <span class="sk">Keycloak</span>
-            <span class="sk">Audit Trail</span>
-            <span class="sk">Least Privilege</span>
-            <span class="sk">Responsible Disclosure</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <div class="skill-cat">Data Science</div>
-          <div class="skill-list">
-            <span class="sk strong">Python</span>
-            <span class="sk strong">SQL</span>
-            <span class="sk strong">NLP</span>
-            <span class="sk strong">Sentiment Analysis</span>
-            <span class="sk">Pandas</span>
-            <span class="sk">Time Series</span>
-            <span class="sk">Computer Vision</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <div class="skill-cat">Business Intelligence</div>
-          <div class="skill-list">
-            <span class="sk">Power BI</span>
-            <span class="sk">QuickSight</span>
-            <span class="sk">Tableau</span>
-            <span class="sk">Looker Studio</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <div class="skill-cat">MLOps & Cloud</div>
-          <div class="skill-list">
-            <span class="sk">Docker</span>
-            <span class="sk">FastAPI</span>
-            <span class="sk">AWS S3</span>
-            <span class="sk">Athena</span>
-            <span class="sk">AWS Bedrock</span>
-            <span class="sk">pgvector</span>
-            <span class="sk">Flask</span>
-            <span class="sk">GitHub</span>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="sec-title">Languages</div>
+      <section class="reveal">
+        <h2 class="sec-title">Languages</h2>
         <div class="lang-row">
           <span class="lang-name">Italian</span>
           <span class="lang-badge native">Native</span>
@@ -1148,12 +1194,110 @@
         </div>
       </section>
 
-
     </div>
   </div>
 
+  <div class="wide-part">
+
+    <section id="open-source" class="reveal">
+      <h2 class="sec-title">Personal Projects &amp; Open Source</h2>
+      <div class="exp-company" style="margin-bottom:12px;"><a href="https://github.com/AndreaBonn" style="color:var(--blue);text-decoration:none;">github.com/AndreaBonn</a> · 40+ public repositories</div>
+
+      <div class="oss-cards">
+        <article class="oss-card">
+          <h3>Speech-to-Text</h3>
+          <p>From recorded lectures to study material: faster-whisper, a local LLM and evaluated hybrid RAG (semantic retrieval 100% vs 56% BM25 on 82 questions).</p>
+          <div class="oss-foot"><span>Whisper · RAG Eval</span><a href="https://github.com/AndreaBonn/speech-to-text" target="_blank" rel="noopener">GitHub</a></div>
+        </article>
+        <article class="oss-card">
+          <h3>Claude Phone</h3>
+          <p>Claude Code driven from Telegram, with a permission gate on tools (MCP included), human approval and audit log.</p>
+          <div class="oss-foot"><span>Claude Code · MCP</span><a href="https://github.com/AndreaBonn/claude-phone" target="_blank" rel="noopener">GitHub</a></div>
+        </article>
+        <article class="oss-card">
+          <h3>AI PR Reviewer <span class="badge">GitHub Marketplace</span></h3>
+          <p>Automated pull request review with multi-provider LLM fallback.</p>
+          <div class="oss-foot"><span>GitHub Actions</span><a href="https://github.com/AndreaBonn/ai-pr-reviewer" target="_blank" rel="noopener">GitHub</a></div>
+        </article>
+        <article class="oss-card">
+          <h3>Clone My Voice</h3>
+          <p>Offline voice cloning and dubbing on GPU, 6 isolated TTS engines, Whisper, blind A/B tests.</p>
+          <div class="oss-foot"><span>TTS · CUDA</span><a href="https://github.com/AndreaBonn/clone-my-voice" target="_blank" rel="noopener">GitHub</a></div>
+        </article>
+        <article class="oss-card">
+          <h3>Learn Italian <span class="badge">live</span></h3>
+          <p>PWA with 150 lessons from A1 to C2 and spaced repetition. One of 10 live PWAs with end-to-end ownership.</p>
+          <div class="oss-foot"><span>React · Firebase</span><a href="https://github.com/AndreaBonn/impara-italiano" target="_blank" rel="noopener">GitHub</a></div>
+        </article>
+        <article class="oss-card">
+          <h3>AI Changelog Generator <span class="badge">GitHub Marketplace</span></h3>
+          <p>AI-written changelogs on every release, with multi-provider LLM fallback.</p>
+          <div class="oss-foot"><span>GitHub Actions</span><a href="https://github.com/AndreaBonn/ai-changelog-generator" target="_blank" rel="noopener">GitHub</a></div>
+        </article>
+      </div>
+      <p class="oss-others">Also: <a href="https://github.com/AndreaBonn/image-generator" target="_blank" rel="noopener">Image Generator</a> (SDXL and FLUX), <a href="https://github.com/AndreaBonn/video-anonimyzer" target="_blank" rel="noopener">video anonymization</a> with YOLO, <a href="https://github.com/AndreaBonn/claude-code-available-tools" target="_blank" rel="noopener">Claude Code Tools Explorer</a>, a <a href="https://github.com/AndreaBonn/agy-profiles" target="_blank" rel="noopener">multi-account manager for Antigravity CLI</a>, the PWAs <a href="https://github.com/AndreaBonn/meteo-e-spiagge" target="_blank" rel="noopener">Meteo &amp; Spiagge</a>, <a href="https://github.com/AndreaBonn/PlotMark" target="_blank" rel="noopener">PlotMark</a> and <a href="https://github.com/AndreaBonn/BetTracker-by-Bonn" target="_blank" rel="noopener">BetTracker</a> (OCR with Gemini), and the Linux tools <a href="https://github.com/AndreaBonn/remote-terminal-bot" target="_blank" rel="noopener">remote shell via Telegram</a>, <a href="https://github.com/AndreaBonn/command-quiver" target="_blank" rel="noopener">Command Quiver</a>, <a href="https://github.com/AndreaBonn/sysbar" target="_blank" rel="noopener">Sysbar</a> and <a href="https://github.com/AndreaBonn/nautilus-extensions" target="_blank" rel="noopener">Nautilus extensions</a>.</p>
+    </section>
+
+    <section class="reveal">
+      <div class="security-card">
+        <div class="exp-meta">
+          <h3 class="exp-role">Critical vulnerability found and reported in WinBoat</h3>
+          <div class="exp-period">Aug 2026</div>
+        </div>
+        <div class="exp-results"><span>critical unauthenticated RCE</span><span>fixed within 4 hours</span><span>credited in v0.9.1</span></div>
+        <p class="exp-desc">Unauthenticated code execution as SYSTEM in <a href="https://github.com/winboat-org/winboat" target="_blank" rel="noopener">WinBoat</a>, an open source project. Private responsible disclosure, with runtime-verified patches and a fix shipped within 4 hours of first contact. Credited in the <a href="https://github.com/winboat-org/winboat/releases/tag/v0.9.1" target="_blank" rel="noopener">v0.9.1 security release</a>.</p>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <h2 class="sec-title">Education</h2>
+
+      <div class="edu-item">
+        <div>
+          <div class="edu-degree">Master's Degree — Data Science & Business Informatics</div>
+          <div class="edu-place">University of Pisa</div>
+          <div class="edu-thesis">Thesis: Italian Emotion Analysis for online reputation monitoring</div>
+        </div>
+        <div class="edu-right">
+          <div class="edu-year">2022</div>
+        </div>
+      </div>
+
+      <div class="edu-item">
+        <div>
+          <div class="edu-degree" style="font-weight:400;">Bachelor's Degree — Business Administration</div>
+          <div class="edu-place">University of Pisa</div>
+        </div>
+        <div class="edu-right">
+          <div class="edu-year">2018</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="closing reveal">
+      <div>
+        <h2 class="closing-title">Interested in my profile?</h2>
+        <p class="closing-text">Email me, or download the CV as a PDF.</p>
+      </div>
+      <div class="closing-actions">
+        <a href="mailto:andreabonacci95@protonmail.com" class="btn btn-on-blue">Email me</a>
+        <a href="https://it.linkedin.com/in/andrea-bonacci-b017b0196" target="_blank" rel="noopener" class="btn btn-on-blue">LinkedIn</a>
+        <a href="andrea_bonacci_cv_en.pdf" download target="_blank" class="btn btn-on-blue">PDF</a>
+      </div>
+    </section>
+
+  </div>
 
 </div>
+
+<div class="mobile-bar" aria-label="Quick contact">
+  <span>Andrea Bonacci · AI Engineer</span>
+  <span class="mobile-bar-actions">
+    <a href="mailto:andreabonacci95@protonmail.com" class="btn btn-primary">Email me</a>
+    <a href="andrea_bonacci_cv_en.pdf" download target="_blank" class="btn btn-ghost">PDF</a>
+  </span>
+</div>
+
 <script>
   (function() {
     const start = new Date(2021, 10, 1); // November 2021
@@ -1164,6 +1308,70 @@
     if (kpi) kpi.textContent = years + '+';
     if (intro) intro.textContent = years;
   })();
+</script>
+<script>
+  (function() {
+    // Section reveal; without IntersectionObserver the page stays fully visible and static.
+    if (!('IntersectionObserver' in window)) return;
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduce) {
+      document.documentElement.classList.add('js-reveal');
+      const revealer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+          if (e.isIntersecting) { e.target.classList.add('is-visible'); revealer.unobserve(e.target); }
+        });
+      }, { rootMargin: '0px 0px -8% 0px' });
+      document.querySelectorAll('.reveal').forEach(function(el) { revealer.observe(el); });
+    }
+  })();
+  (function() {
+    // Active nav link. Skills sits beside Experience in the sidebar, so it is marked only when clicked;
+    // Contact can never reach the top of the viewport, so the page bottom selects it.
+    const links = [...document.querySelectorAll('.section-nav a')];
+    const flow = ['profile', 'experience', 'projects', 'open-source', 'contact'];
+    const mark = function(id) {
+      links.forEach(function(a) {
+        if (a.getAttribute('href') === '#' + id) a.setAttribute('aria-current', 'true');
+        else a.removeAttribute('aria-current');
+      });
+    };
+    let clicked = null;
+    let clickedAt = 0;
+    links.forEach(function(a) {
+      a.addEventListener('click', function() { clicked = a.getAttribute('href').slice(1); clickedAt = performance.now(); mark(clicked); });
+    });
+    let ticking = false;
+    const update = function() {
+      ticking = false;
+      const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
+      let current = flow[0];
+      flow.forEach(function(id) {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top <= 120) current = id;
+      });
+      if (atBottom) current = 'contact';
+      if (clicked === 'skills') {
+        const top = document.getElementById('skills').getBoundingClientRect().top;
+        if (performance.now() - clickedAt < 1500 || (top > -200 && top < 200)) return;
+      }
+      clicked = null;
+      mark(current);
+    };
+    window.addEventListener('scroll', function() {
+      if (!ticking) { ticking = true; requestAnimationFrame(update); }
+    }, { passive: true });
+    update();
+  })();
+  // Closed <details> would hide technical bullets on paper.
+  let closedBeforePrint = [];
+  window.addEventListener('beforeprint', function() {
+    closedBeforePrint = [...document.querySelectorAll('details.exp-more:not([open])')];
+    closedBeforePrint.forEach(function(d) { d.open = true; });
+  });
+  window.addEventListener('afterprint', function() {
+    closedBeforePrint.forEach(function(d) { d.open = false; });
+    closedBeforePrint = [];
+  });
 </script>
 <script>
   if ('serviceWorker' in navigator) {

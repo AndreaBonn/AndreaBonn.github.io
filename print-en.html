@@ -510,6 +510,8 @@
   .exp-item {
     break-inside: avoid;
   }
+  /* Keep section headings attached to their first entry */
+  .sec-title, .sec-title + .exp-company { break-after: avoid; }
 
   .exp-sub-item {
     break-inside: avoid;
@@ -631,18 +633,10 @@
 
             <div class="exp-sub-item minor">
               <div class="exp-meta">
-                <div class="exp-role">Data Scientist <span class="role-qualifier">— contract</span></div>
-                <div class="exp-period">Apr 2022 → Jun 2022</div>
+                <div class="exp-role">Data Scientist <span class="role-qualifier">— internship and contract</span></div>
+                <div class="exp-period">Nov 2021 → Jun 2022</div>
               </div>
-              <div class="exp-desc">Post-internship hire. First autonomous data analysis and modeling projects for enterprise clients.</div>
-            </div>
-
-            <div class="exp-sub-item minor">
-              <div class="exp-meta">
-                <div class="exp-role">Data Scientist <span class="role-qualifier">— curricular internship</span></div>
-                <div class="exp-period">Nov 2021 → Mar 2022</div>
-              </div>
-              <div class="exp-desc">Master's thesis internship. Development of an Italian Emotion Analysis system for online reputation monitoring.</div>
+              <div class="exp-desc">Master's thesis internship (Italian-language Emotion Analysis for online reputation), then hired; first independent projects for enterprise clients.</div>
             </div>
 
           </div>
@@ -655,7 +649,7 @@
           </div>
           <div class="exp-company">University of Cagliari</div>
           <div class="exp-desc">
-            Design and delivery of two intensive sessions (<strong>8 hours total</strong>) on <em>"Artificial Intelligence Applied to Coding"</em>. LLM architecture, advanced prompt engineering, agentic coding with CLI tools, Model Context Protocol (MCP) integration and custom Skills creation for AI agents. Hands-on workshops where students built their first AI-assisted development workflows.
+            Designed and delivered two intensive sessions (<strong>8 hours total</strong>) on <em>"Artificial Intelligence Applied to Coding"</em>: LLM architecture, prompt engineering, agentic coding with CLI tools, MCP and custom Skills.
           </div>
           <div class="exp-tags">
             <span class="tag tag-green">AI for Coding</span>
@@ -670,157 +664,164 @@
 
       <section>
         <div class="sec-title">Client Projects</div>
-        <div class="exp-company" style="margin-bottom:8px;">On a contract basis for an enterprise client · details anonymized for confidentiality</div>
+        <div class="exp-company" style="margin-bottom:8px;">On a contract basis for enterprise clients · details anonymized for confidentiality</div>
+
+        <div class="exp-item">
+          <div class="exp-meta">
+            <div class="exp-role">AI Governance Platform for Agents</div>
+            <div class="exp-period">2026 · in-house product</div>
+          </div>
+          <div class="exp-lead">
+            Gateway and control plane that make AI agents usable in regulated industries: every call to models and tools goes through identity, policy decision and audit.
+          </div>
+          <ul class="exp-bullets">
+            <li>LLM gateway with agent identity (Keycloak), policy-as-code (OPA/Rego), append-only audit trail and EU data residency.</li>
+            <li>Multi-tenant control plane designed and built single-handedly: human-in-the-loop approvals, policy blocks, per-agent costs (FinOps).</li>
+            <li>Sandboxed agent with 19 MCP tools and 100 policy rules, fail-closed multi-user isolation; enterprise chat assistant in a client trial.</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="tag tag-green">AI Governance</span>
+            <span class="tag tag-green">MCP</span>
+            <span class="tag tag-green">Policy-as-Code</span>
+            <span class="tag tag-blue">OPA/Rego</span>
+            <span class="tag tag-blue">Keycloak</span>
+            <span class="tag tag-blue">LiteLLM</span>
+            <span class="tag tag-plain">FastAPI · React</span>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-meta">
+            <div class="exp-role">Conversational RAG Agent for a Manufacturer's Website</div>
+          </div>
+          <div class="exp-lead">
+            Multilingual assistant for the public website of an international industrial group, with answers that cite the source document section and a log of unanswered questions for the editorial team.
+          </div>
+          <ul class="exp-bullets">
+            <li>Hybrid lexical + vector retrieval over 800+ technical documents: relevant context raised from 2% to 92%.</li>
+            <li>Continuous evaluation with DeepEval: faithfulness 1.00, contextual recall 0.90, no undue refusals.</li>
+            <li>AWS Bedrock in an EU region, pgvector, deployed on EC2; 4,000+ tests at 100% coverage.</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="tag tag-green">RAG</span>
+            <span class="tag tag-green">Hybrid Search</span>
+            <span class="tag tag-green">LLM Eval</span>
+            <span class="tag tag-blue">AWS Bedrock</span>
+            <span class="tag tag-blue">pgvector</span>
+            <span class="tag tag-plain">DeepEval</span>
+          </div>
+        </div>
 
         <div class="exp-item">
           <div class="exp-meta">
             <div class="exp-role">Real-Time Conversational Voice AI Systems</div>
           </div>
           <div class="exp-lead">
-            Low-latency, voice-to-voice AI conversation systems with automatic evaluation of the interactions.
+            Low-latency speech-to-speech AI conversation, with automated evaluation of interactions.
           </div>
           <ul class="exp-bullets">
-            <li>Integration of leading real-time voice AI providers (OpenAI Realtime API, Gemini Live) and streaming transcription (AssemblyAI).</li>
-            <li>Multi-provider architectures with fallback and circuit breaker for production resilience.</li>
-            <li>RAG knowledge bases (embeddings, vector search) queried by the AI via function calling.</li>
-            <li>Automatic evaluation with anti-hallucination validation and multilingual prompt engineering, integrable into heterogeneous production stacks.</li>
+            <li>OpenAI Realtime API, Gemini Live and streaming transcription (AssemblyAI), with multi-provider fallback and circuit breakers.</li>
+            <li>RAG knowledge base queried via function calling; hallucination checks during evaluation.</li>
           </ul>
           <div class="exp-tags">
             <span class="tag tag-green">Realtime Voice AI</span>
             <span class="tag tag-green">OpenAI Realtime API</span>
-            <span class="tag tag-green">RAG</span>
             <span class="tag tag-green">Function Calling</span>
             <span class="tag tag-plain">Circuit Breaker</span>
-            <span class="tag tag-blue">pgvector</span>
           </div>
         </div>
 
         <div class="exp-item">
           <div class="exp-meta">
-            <div class="exp-role">AI Agents for Document & Finance Automation</div>
+            <div class="exp-role">RAG &amp; Document Intelligence for Compliance</div>
           </div>
           <div class="exp-lead">
-            AI agents for document and accounting process automation, such as automatic reconciliation of related documents.
+            Compliance validation of contracts, policies and playbooks against a regulatory corpus, with source citations and human review.
           </div>
           <ul class="exp-bullets">
-            <li>LLM agents with native function calling and validated structured output (Pydantic), with advanced prompt engineering.</li>
-            <li>Document AI to extract structured data from heterogeneous documents (XML, PDF, digitally signed files) via parsing and information extraction.</li>
-            <li>Deterministic matching engines with rules, tolerances and confidence scoring.</li>
-            <li>Integration with business and ERP systems, plus human-in-the-loop flows for reviewing uncertain cases.</li>
-          </ul>
-          <div class="exp-tags">
-            <span class="tag tag-green">AI Agent</span>
-            <span class="tag tag-green">Function Calling</span>
-            <span class="tag tag-green">Document AI</span>
-            <span class="tag tag-green">Information Extraction</span>
-            <span class="tag tag-green">Fuzzy Matching</span>
-            <span class="tag tag-blue">ERP Integration</span>
-          </div>
-        </div>
-
-        <div class="exp-item">
-          <div class="exp-meta">
-            <div class="exp-role">RAG & Document Intelligence for Compliance</div>
-          </div>
-          <div class="exp-lead">
-            AI systems that validate document compliance (contracts, policies, playbooks) against a regulatory corpus, with source citation and human review.
-          </div>
-          <ul class="exp-bullets">
-            <li>RAG pipelines with hybrid search (BM25 and semantic embeddings) and domain-specific chunking.</li>
-            <li>Multi-phase agentic orchestration over LLMs for issue generation and structured verdicts with regulatory references.</li>
-            <li>Reliability through validated output and anti-hallucination via mandatory back-links to sources.</li>
-            <li>Human-in-the-loop flows with checkpoint, resume and audit trail; asynchronous FastAPI backend with WebSocket updates.</li>
+            <li>Hybrid search (BM25 + embeddings) and multi-stage agentic orchestration for structured verdicts with regulatory references.</li>
+            <li>Every finding links back to its source, to block hallucinations; human-in-the-loop with checkpoints and audit trail (async FastAPI, WebSocket).</li>
           </ul>
           <div class="exp-tags">
             <span class="tag tag-green">RAG</span>
-            <span class="tag tag-green">Hybrid Search</span>
             <span class="tag tag-green">LLM Orchestration</span>
             <span class="tag tag-green">Structured Output</span>
             <span class="tag tag-green">Human-in-the-Loop</span>
-            <span class="tag tag-blue">FastAPI</span>
           </div>
         </div>
+
+        <div class="exp-item">
+          <div class="exp-meta">
+            <div class="exp-role">AI Agents for Document &amp; Finance Automation</div>
+          </div>
+          <div class="exp-lead">
+            Automation of document and accounting processes, such as reconciliation of related documents.
+          </div>
+          <ul class="exp-bullets">
+            <li>Agents with function calling and validated output (Pydantic); extraction from XML, PDF and digitally signed files.</li>
+            <li>Deterministic matching with tolerances and confidence scoring, ERP integration and human review of uncertain cases.</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="tag tag-green">AI Agent</span>
+            <span class="tag tag-green">Document AI</span>
+            <span class="tag tag-green">Information Extraction</span>
+          </div>
+        </div>
+
       </section>
 
       <section>
-        <div class="sec-title">Personal Projects & Open Source</div>
-        <div class="exp-company" style="margin-bottom:8px;"><a href="https://github.com/AndreaBonn" style="color:var(--blue);text-decoration:none;">github.com/AndreaBonn</a> · 20 public repositories</div>
+        <div class="sec-title">Personal Projects &amp; Open Source</div>
+        <div class="exp-company" style="margin-bottom:8px;"><a href="https://github.com/AndreaBonn" style="color:var(--blue);text-decoration:none;">github.com/AndreaBonn</a> · 40+ public repositories</div>
 
         <div class="exp-item">
           <div class="exp-meta">
-            <div class="exp-role">AI & Automation</div>
+            <div class="exp-role">Local AI: Voice, Transcription, Images</div>
             <div class="exp-period">Ongoing</div>
           </div>
           <div class="exp-desc">
-            Two GitHub Actions on Marketplace with multi-provider LLM architecture and fallback: <a href="https://github.com/AndreaBonn/ai-pr-reviewer" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">AI PR Reviewer</a> (code review, key rotation) and <a href="https://github.com/AndreaBonn/ai-changelog-generator" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">AI Changelog Generator</a> (release notes, self-evaluation, multilingual). <a href="https://github.com/AndreaBonn/video-anonimyzer" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">Video anonymization</a> with YOLO/CV, <a href="https://github.com/AndreaBonn/web-article-summarizer" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">Chrome extension for LLM-powered article/PDF summaries</a>, <a href="https://github.com/AndreaBonn/text-to-speech" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">multilingual TTS</a>.
+            <a href="https://github.com/AndreaBonn/clone-my-voice" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">Clone My Voice</a>: offline voice cloning and dubbing on GPU, 6 isolated TTS engines, Whisper, blind A/B tests. <a href="https://github.com/AndreaBonn/speech-to-text" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">Speech-to-Text</a>: from recorded lectures to study material with faster-whisper, a local LLM and evaluated hybrid RAG (semantic retrieval 100% vs 56% BM25 on 82 questions). <a href="https://github.com/AndreaBonn/image-generator" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">Image Generator</a> on SDXL and FLUX, <a href="https://github.com/AndreaBonn/video-anonimyzer" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">video anonymization</a> with YOLO.
           </div>
           <div class="exp-tags">
-            <span class="tag tag-blue">Python</span>
+            <span class="tag tag-green">Voice Cloning</span>
+            <span class="tag tag-green">Whisper</span>
+            <span class="tag tag-green">RAG Eval</span>
+            <span class="tag tag-green">Diffusion</span>
+            <span class="tag tag-blue">Ollama</span>
+            <span class="tag tag-plain">CUDA</span>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-meta">
+            <div class="exp-role">Agentic Tooling</div>
+            <div class="exp-period">Ongoing</div>
+          </div>
+          <div class="exp-desc">
+            <a href="https://github.com/AndreaBonn/claude-phone" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">Claude Phone</a>: Claude Code driven from Telegram, with a permission gate on tools (MCP included), human approval and audit log. Two GitHub Marketplace Actions with multi-provider LLM fallback: <a href="https://github.com/AndreaBonn/ai-pr-reviewer" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">AI PR Reviewer</a> and <a href="https://github.com/AndreaBonn/ai-changelog-generator" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">AI Changelog Generator</a>. <a href="https://github.com/AndreaBonn/claude-code-available-tools" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">Claude Code Tools Explorer</a> (TUI) and <a href="https://github.com/AndreaBonn/agy-profiles" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">multi-account manager for Antigravity CLI</a>.
+          </div>
+          <div class="exp-tags">
+            <span class="tag tag-green">Claude Code</span>
+            <span class="tag tag-green">Human-in-the-Loop</span>
             <span class="tag tag-green">GitHub Actions</span>
-            <span class="tag tag-green">GitHub Marketplace</span>
-            <span class="tag tag-green">YOLO</span>
-            <span class="tag tag-green">Computer Vision</span>
-            <span class="tag tag-green">LLM API</span>
-            <span class="tag tag-plain">Chrome Extension</span>
+            <span class="tag tag-plain">Textual</span>
           </div>
         </div>
 
         <div class="exp-item">
           <div class="exp-meta">
-            <div class="exp-role">AI-Powered Web Apps</div>
+            <div class="exp-role">Web &amp; Desktop Products</div>
             <div class="exp-period">Ongoing</div>
           </div>
           <div class="exp-desc">
-            <a href="https://github.com/AndreaBonn/BetTracker-by-Bonn" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">BetTracker</a> — sports betting tracker with screenshot OCR, automatic result resolution, AI chat and advanced statistics. PWA with offline, OAuth and cloud sync.
+            10 live PWAs with end-to-end ownership, including <a href="https://github.com/AndreaBonn/impara-italiano" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">Learn Italian</a> (150 lessons A1-C2, spaced repetition), <a href="https://github.com/AndreaBonn/meteo-e-spiagge" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">Meteo &amp; Spiagge</a>, <a href="https://github.com/AndreaBonn/PlotMark" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">PlotMark</a>, <a href="https://github.com/AndreaBonn/BetTracker-by-Bonn" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">BetTracker</a> (OCR with Gemini) and apps for personal finance, health and shared expenses. Linux desktop tools: <a href="https://github.com/AndreaBonn/remote-terminal-bot" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">remote shell via Telegram</a>, <a href="https://github.com/AndreaBonn/command-quiver" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">Command Quiver</a>, <a href="https://github.com/AndreaBonn/sysbar" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">Sysbar</a>, <a href="https://github.com/AndreaBonn/nautilus-extensions" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">Nautilus extensions</a>.
           </div>
           <div class="exp-tags">
             <span class="tag tag-blue">React</span>
             <span class="tag tag-blue">TypeScript</span>
-            <span class="tag tag-green">Gemini AI</span>
             <span class="tag tag-green">Firebase</span>
             <span class="tag tag-blue">PWA</span>
-            <span class="tag tag-plain">Tailwind CSS</span>
-          </div>
-        </div>
-
-        <div class="exp-item">
-          <div class="exp-meta">
-            <div class="exp-role">Full-Stack Web Apps</div>
-            <div class="exp-period">Ongoing</div>
-          </div>
-          <div class="exp-desc">
-            Production-grade PWAs with end-to-end ownership: <a href="https://github.com/AndreaBonn/meteo-e-spiagge" target="_blank" style="color:var(--blue);text-decoration:none;">Meteo &amp; Spiagge</a> — multiple Open-Meteo APIs, 0-10 beach scoring, Leaflet maps, Recharts, Firestore community layer, offline; <a href="https://github.com/AndreaBonn/PlotMark" target="_blank" style="color:var(--blue);text-decoration:none;">PlotMark</a> — movie/TV tracking with TMDB, statistics, year-in-review and spoiler-safe social. Plus <a href="https://github.com/AndreaBonn/BudgeeByBonn" target="_blank" style="color:var(--blue);text-decoration:none;">finance</a>, <a href="https://github.com/AndreaBonn/LifeTrackByBonn" target="_blank" style="color:var(--blue);text-decoration:none;">health</a>, <a href="https://github.com/AndreaBonn/RoomMatesByBonn" target="_blank" style="color:var(--blue);text-decoration:none;">shared expenses</a>. End-to-end ownership.
-          </div>
-          <div class="exp-tags">
-            <span class="tag tag-blue">React</span>
-            <span class="tag tag-blue">TypeScript</span>
-            <span class="tag tag-blue">JavaScript</span>
-            <span class="tag tag-blue">PWA</span>
-            <span class="tag tag-green">Leaflet</span>
-            <span class="tag tag-green">Firebase</span>
-            <span class="tag tag-plain">Cloud Sync</span>
-          </div>
-        </div>
-
-        <div class="exp-item">
-          <div class="exp-meta">
-            <div class="exp-role">Developer Tools & CLI</div>
-            <div class="exp-period">Ongoing</div>
-          </div>
-          <div class="exp-desc">
-            <a href="https://github.com/AndreaBonn/claude-code-available-tools" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">Claude Code Tools Explorer</a> — TUI for config inspection (Textual/Rich). <a href="https://github.com/AndreaBonn/command-quiver" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">Command Quiver</a> — desktop prompt & shell manager (GTK4, SQLite). <a href="https://github.com/AndreaBonn/remote-terminal-bot" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">Telegram bot for remote multi-PC shell</a> (zero infrastructure, heartbeat, audit log, systemd), <a href="https://github.com/AndreaBonn/nautilus-extensions" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">file manager extensions</a>, <a href="https://github.com/AndreaBonn/cli-image-paste" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">clipboard image CLI</a>, <a href="https://github.com/AndreaBonn/audio-filename-fixer" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">audio renaming via AcoustID</a>, and <a href="https://github.com/AndreaBonn/dipendenti-in-cloud-notifier" target="_blank" style="color:var(--blue);text-decoration:none;border-bottom:1px solid var(--border);">smart clock-in notifications</a>.
-          </div>
-          <div class="exp-tags">
-            <span class="tag tag-blue">Python</span>
-            <span class="tag tag-blue">JavaScript</span>
-            <span class="tag tag-blue">asyncio</span>
-            <span class="tag tag-plain">Textual/Rich</span>
-            <span class="tag tag-plain">Telegram Bot</span>
-            <span class="tag tag-plain">Shell</span>
-            <span class="tag tag-plain">Linux</span>
-            <span class="tag tag-plain">systemd</span>
-            <span class="tag tag-plain">CLI</span>
-            <span class="tag tag-plain">Chrome Extension</span>
+            <span class="tag tag-plain">GTK4</span>
           </div>
         </div>
 
@@ -879,8 +880,8 @@
             <div class="kpi-label">years of professional experience</div>
           </div>
           <div class="kpi" style="flex:1;">
-            <div class="kpi-num">18+</div>
-            <div class="kpi-label">open source projects</div>
+            <div class="kpi-num">40+</div>
+            <div class="kpi-label">open source repositories</div>
           </div>
         </div>
       </section>
@@ -894,6 +895,10 @@
         <div class="callout">
           <div class="callout-label">AI Engineering</div>
           <div class="callout-text">Advanced use of LLMs, AI agents and MCP to build intelligent workflows and automate complex tasks.</div>
+        </div>
+        <div class="callout">
+          <div class="callout-label">Governed, measured AI</div>
+          <div class="callout-text">Agents with identity, policy and audit, built for regulated industries. RAG evaluated with quality metrics.</div>
         </div>
         <div class="callout gold-variant">
           <div class="callout-label">University Speaker</div>
@@ -925,8 +930,22 @@
             <span class="sk">Sub-agents</span>
             <span class="sk">Hugging Face</span>
             <span class="sk">Ollama</span>
-            <span class="sk">LLM Eval</span>
+            <span class="sk strong">LLM Eval</span>
+            <span class="sk">Agent Skills</span>
+            <span class="sk">DeepEval</span>
             <span class="sk">Agentic Coding Config</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-cat">Governance & Security</div>
+          <div class="skill-list">
+            <span class="sk strong">Policy-as-Code</span>
+            <span class="sk">OPA/Rego</span>
+            <span class="sk">Keycloak</span>
+            <span class="sk">Audit Trail</span>
+            <span class="sk">Least Privilege</span>
+            <span class="sk">Responsible Disclosure</span>
           </div>
         </div>
 
